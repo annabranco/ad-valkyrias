@@ -26,6 +26,8 @@ import FeaturedMedia from "./featured-media";
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  console.log("$$$ data", data);
+
   // Get the data of the post.
   const post = state.source[data.type][data.id];
   // Get the data of the author.
@@ -62,10 +64,9 @@ const Post = ({ state, actions, libraries }) => {
                 </Author>
               </StyledLink>
             )}
-            {!data.isPlayer && (
+            {!data.isPlayer && !data.isPlayersPage && (
               <DateWrapper>
-                {" "}
-                on <b>{date.toDateString()}</b>
+                <b>{date.toDateString()}</b>
               </DateWrapper>
             )}
           </div>

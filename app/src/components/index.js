@@ -122,11 +122,14 @@ const Body = styled.div`
     rgba(100, 100, 100, 0.01)
   );
   overscroll-behavior: contain;
+  min-height: 100vh;
   width: 95%;
+  scroll: hidden;
 `;
 
 const Main = styled.div`
   margin: 50px 0 0 30%;
+  height: 100%;
   width: 100%;
   overscroll-behavior: none;
 `;

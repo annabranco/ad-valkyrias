@@ -13,11 +13,11 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["News", "/"],
-            ["The Club", "/the-club/"],
-            ["Players", "/players/"],
-            ["Matches", "/category/matches/"],
-            ["Juniors", "/tag/junior/"],
+            ["Noticias", "/"],
+            ["Sobre nosotras", "/the-club/"],
+            ["Equipo senior", "/players/"],
+            ["Partidos", "/category/matches/"],
+            ["Juveniles", "/tag/junior/"],
           ],
           featured: {
             showOnList: true,

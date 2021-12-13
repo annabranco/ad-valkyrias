@@ -21,43 +21,60 @@ const PlayerDetails = ({ state }) => {
       playerImgPosition.bottom = "-10px";
       playerImgPosition.left = "43px";
       break;
-    case "DL":
-      playerImgPosition.bottom = "20px";
-      playerImgPosition.left = "5px";
-      break;
-    case "DC":
-      playerImgPosition.bottom = "20px";
+    case "SW":
+      playerImgPosition.bottom = "10px";
       playerImgPosition.left = "43px";
       break;
-    case "DR":
+    case "RB":
       playerImgPosition.bottom = "20px";
       playerImgPosition.right = "5px";
       break;
-    case "DCL":
+    case "RCB":
       playerImgPosition.bottom = "20px";
-      playerImgPosition.left = "28px";
+      playerImgPosition.left = "53px";
       break;
-    case "DCR":
+    case "CB":
       playerImgPosition.bottom = "20px";
+      playerImgPosition.left = "43px";
+      break;
+    case "LCB":
+      playerImgPosition.bottom = "20px";
+      playerImgPosition.left = "33px";
+      break;
+    case "lB":
+      playerImgPosition.bottom = "20px";
+      playerImgPosition.left = "5px";
+      break;
+    case "RWB":
+      playerImgPosition.bottom = "25px";
+      playerImgPosition.right = "5px";
+      break;
+    case "LWB":
+      playerImgPosition.bottom = "25px";
+      playerImgPosition.left = "5px";
+      break;
+
+    case "RDM":
+      playerImgPosition.bottom = "35px";
       playerImgPosition.right = "28px";
+      break;
+    case "CDM":
+      playerImgPosition.bottom = "35px";
+      playerImgPosition.left = "43px";
+      break;
+    case "LDM":
+      playerImgPosition.bottom = "35px";
+      playerImgPosition.left = "28px";
       break;
     case "RM":
       playerImgPosition.bottom = "63px";
       playerImgPosition.right = "5px";
       break;
-    case "DM":
-      playerImgPosition.bottom = "38px";
-      playerImgPosition.left = "43px";
-      break;
-    case "DML":
-      playerImgPosition.bottom = "38px";
-      playerImgPosition.left = "28px";
-      break;
-    case "DMR":
-      playerImgPosition.bottom = "38px";
+    case "MCR":
+      playerImgPosition.bottom = "63px";
       playerImgPosition.right = "28px";
       break;
-    case "MC":
+    case "CM":
       playerImgPosition.bottom = "63px";
       playerImgPosition.left = "43px";
       break;
@@ -65,49 +82,46 @@ const PlayerDetails = ({ state }) => {
       playerImgPosition.bottom = "63px";
       playerImgPosition.left = "28px";
       break;
-    case "MCR":
+    case "LM":
       playerImgPosition.bottom = "63px";
+      playerImgPosition.left = "5px";
+      break;
+
+    case "RAM":
+      playerImgPosition.bottom = "50px";
       playerImgPosition.right = "28px";
       break;
     case "AM":
       playerImgPosition.bottom = "50px";
       playerImgPosition.left = "43px";
       break;
-    case "AML":
+    case "LAM":
       playerImgPosition.bottom = "50px";
       playerImgPosition.left = "28px";
       break;
-    case "AMR":
-      playerImgPosition.bottom = "50px";
-      playerImgPosition.right = "28px";
-      break;
-    case "LM":
-      playerImgPosition.bottom = "63px";
-      playerImgPosition.left = "5px";
-      break;
     case "RW":
-      playerImgPosition.top = "30px";
+      playerImgPosition.top = "18px";
       playerImgPosition.right = "10px";
       break;
-    case "FW":
+    case "CF":
       playerImgPosition.top = "18px";
       playerImgPosition.left = "43px";
+      break;
+    case "LW":
+      playerImgPosition.top = "18px";
+      playerImgPosition.left = "10px";
+      break;
+    case "RS":
+      playerImgPosition.top = "5px";
+      playerImgPosition.right = "28px";
       break;
     case "ST":
       playerImgPosition.top = "5px";
       playerImgPosition.left = "43px";
       break;
-    case "FWL":
-      playerImgPosition.top = "18px";
+    case "LS":
+      playerImgPosition.top = "5px";
       playerImgPosition.left = "28px";
-      break;
-    case "FWR":
-      playerImgPosition.top = "18px";
-      playerImgPosition.right = "28px";
-      break;
-    case "LW":
-      playerImgPosition.top = "30px";
-      playerImgPosition.left = "10px";
       break;
     default:
       playerImgPosition.top = 0;
@@ -117,7 +131,7 @@ const PlayerDetails = ({ state }) => {
   return (
     <Container>
       <div>
-        <p>{POSITIONS[player.position]}</p>
+        <p>{POSITIONS.es[player.position]}</p>
         <OuterFootballField>
           <FootballField>
             <PlayerIcon
@@ -129,10 +143,10 @@ const PlayerDetails = ({ state }) => {
           </FootballField>
         </OuterFootballField>
         <ContainerPlayerCity>
-          From {player.city}{" "}
+          {player.city}
           <CountryFlag src={countryFlag} alt={`Flag of ${player.country}`} />
         </ContainerPlayerCity>
-        <ContainerPlayerSince>Joined in {player.since}</ContainerPlayerSince>
+        <ContainerPlayerSince>Desde {player.since}</ContainerPlayerSince>
         <ContainerPlayerTwitter>
           <SocialLink link={player.twitter} type="Instagram" />
         </ContainerPlayerTwitter>
@@ -144,6 +158,7 @@ const PlayerDetails = ({ state }) => {
 export default connect(PlayerDetails);
 
 const Container = styled.div`
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
   padding: 10px 30px;
@@ -153,7 +168,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 100px;
-  height: 100%;
 `;
 
 const OuterFootballField = styled.div`
@@ -166,20 +180,21 @@ const FootballField = styled.div`
   display: block;
   position: relative;
   margin-top: 20px;
-  background-image: url(${FootballFieldImg});
+  background: url(${FootballFieldImg});
   height: 153px;
   width: 114px;
 `;
 
 const PlayerIcon = styled.div`
+  opacity: 1;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  border: 1px solid white;
   border-radius: 20px;
   background: ${({ playerPosition }) =>
-    playerPosition === "GK" ? "green" : "crimson"};
+    playerPosition === "GK" ? "#e57906" : "#004D00"};
   height: 28px;
   width: 28px;
   font-size: 17px;
