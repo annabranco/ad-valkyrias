@@ -72,6 +72,7 @@ import UnitedStatesFlag from "./us.png";
 import UruguayFlag from "./uy.png";
 import VenezuelaFlag from "./ve.png";
 import SouthAfricaFlag from "./za.png";
+import RainbowFlag from "./rainbow-flag.png";
 
 export {
   AlbaniaFlag,
@@ -148,4 +149,5 @@ export {
   UruguayFlag,
   VenezuelaFlag,
   SouthAfricaFlag,
+  RainbowFlag,
 };

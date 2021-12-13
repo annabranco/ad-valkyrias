@@ -1,17 +1,15 @@
 import React from "react";
 import { Global, css, connect, styled, Head } from "frontity";
-import Header from "./header";
-import List from "./list";
-import Post from "./post";
-import Players from "./Players";
-import ErrorPage from "./page-error.js";
-import Loading from "./loading";
-import Home from "./Home";
-import PlayersList from "./Players/playerList.js";
+import List from "./core/List";
+import ErrorPage from "./core/ErrorComponent/ErrorComponent";
+import Loading from "./core/Loading/Loading";
+import Post from "./core/Post/Post";
+import Header from "./views/Header/Header";
+import Players from "./views/Players/Players";
+import PlayersList from "./views/Players/PlayersList/PlayersList";
+import MainBanner from "./views/MainBanner/MainBanner";
 import RunesFont from "../assets/comic-runes.ttf";
-import IconMedium from "../assets/images/shield/valkyrias-icon-big.png";
-import IconSmall from "../assets/images/shield/valkyrias-icon-small.png";
-import IconTiny from "../assets/images/shield/valkyrias-icon-tiny.png";
+import { IconMedium, IconSmall, IconTiny } from "../assets/images";
 
 const globalStyles = css`
   @font-face {
@@ -66,7 +64,7 @@ const Theme = ({ state }) => {
           <Header />
         </HeadContainer>
         <Body>
-          <Home />
+          <MainBanner />
           <Main>
             {data.isFetching && <Loading />}
             {data.isArchive && <List />}
@@ -132,4 +130,5 @@ const Main = styled.div`
   height: 100%;
   width: 100%;
   overscroll-behavior: none;
+  overflow-x: hidden;
 `;
