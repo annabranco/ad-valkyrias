@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.6.2",
+  "description": "A.D. Valkyrias web page",
+  "keywords": [
+    "frontity",
+    "valkyrias"
+  ],
+  "dependencies": {
+    "@frontity/components": "^1.8.2",
+    "@frontity/html2react": "^1.6.1",
+    "frontity": "^1.17.0"
+  }
+}
