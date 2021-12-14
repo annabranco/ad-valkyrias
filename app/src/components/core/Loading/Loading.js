@@ -1,8 +1,8 @@
 import { css } from "frontity";
-import { Bar, Container } from "./Loading.styles";
+import { Bar, LoadingContainer } from "./Loading.styles";
 
 const Loading = () => (
-  <Container>
+  <LoadingContainer>
     <div>
       <div css={Bar(1)} />
       <div css={Bar(2)} />
@@ -10,7 +10,7 @@ const Loading = () => (
       <div css={Bar(4)} />
       <div css={Bar(5)} />
     </div>
-  </Container>
+  </LoadingContainer>
 );
 
 export default Loading;

@@ -3,7 +3,7 @@ import { connect } from "frontity";
 import List from "../List";
 import FeaturedMedia from "../FeaturedMedia/FeaturedMedia";
 import {
-  Container,
+  PostWrapper,
   Title,
   StyledLink,
   Author,
@@ -24,7 +24,7 @@ const Post = ({ state, actions, libraries }) => {
   }, [actions.source]);
 
   return data.isReady ? (
-    <Container>
+    <PostWrapper>
       <div>
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
@@ -62,7 +62,7 @@ const Post = ({ state, actions, libraries }) => {
           <Html2React html={post.content.rendered} />
         </Content>
       )}
-    </Container>
+    </PostWrapper>
   ) : null;
 };
 

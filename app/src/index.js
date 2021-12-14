@@ -1,12 +1,12 @@
-import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
-import { players, player } from "./utils/handlers";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons";
+import Main from "./components/Main/Main";
+import { players, player } from "./utils/handlers";
 
 library.add(fab, faEnvelope, faFutbol);
 
@@ -19,7 +19,7 @@ const before = async ({ libraries, actions }) => {
 const App = {
   name: "app",
   roots: {
-    theme: Theme,
+    theme: Main,
   },
   state: {
     theme: {

@@ -34,13 +34,17 @@ export const Excerpt = styled.div`
 `;
 Excerpt.displayName = "Excerpt";
 
-export const Container = styled.section`
-  width: 800px;
+export const ListContainer = styled.section`
+  width: 90%;
   margin: 0;
   padding: 24px;
   list-style: none;
+
+  @media all and (min-width: 768px) {
+    width: 800px;
+  }
 `;
-Container.displayName = "Container";
+ListContainer.displayName = "ListContainer";
 
 export const Header = styled.h3`
   font-weight: 300;

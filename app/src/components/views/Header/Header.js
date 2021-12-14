@@ -1,16 +1,17 @@
 import { connect } from "frontity";
 import Nav from "../Nav/Nav";
 import MobileMenu from "../../core/MobileMenu/menu";
-import { Container, Title } from "./Header.styles";
+import { Logo } from "../../../assets/images";
+import { HeaderSection, HeaderLogo, Title } from "./Header.styles";
 
 const Header = ({ state }) => {
   return (
     <>
-      <Container>
+      <HeaderSection>
         <Title>Valkyrias</Title>
         <MobileMenu />
-        {/* <SmallLogo src={IconMedium} alt="Valkyrias logo" /> */}
-      </Container>
+        <HeaderLogo src={Logo} alt="Valkyrias logo" />
+      </HeaderSection>
       <Nav />
     </>
   );

@@ -7,7 +7,7 @@ import { POSITIONS } from "../../../../utils/positions";
 import { RainbowFlag } from "../../../../assets/images/flags";
 import { getFlagURL } from "../../../../utils/flags";
 import {
-  Container,
+  PlayersDetailsWrapper,
   OuterFootballField,
   FootballField,
   PlayerIcon,
@@ -138,7 +138,7 @@ const PlayerDetails = ({ state }) => {
       break;
   }
   return (
-    <Container>
+    <PlayersDetailsWrapper>
       <div>
         <p>{POSITIONS.es[player.position]}</p>
         <OuterFootballField>
@@ -160,7 +160,7 @@ const PlayerDetails = ({ state }) => {
           <SocialLink link={player.twitter} type="Instagram" />
         </ContainerPlayerTwitter>
       </div>
-    </Container>
+    </PlayersDetailsWrapper>
   );
 };
 

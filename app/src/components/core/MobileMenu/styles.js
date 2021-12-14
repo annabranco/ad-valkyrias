@@ -2,8 +2,8 @@ import { styled } from "frontity";
 
 export const MenuToggle = styled.button`
   position: absolute;
-  right: 24px;
-  top: 24px;
+  right: 10px;
+  top: 5px;
   background: transparent;
   border: 0;
   color: white;

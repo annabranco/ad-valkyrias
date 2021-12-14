@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "frontity";
 import { FootballFieldImg } from "../../../../assets/images";
 
-export const Container = styled.div`
+export const PlayersDetailsWrapper = styled.div`
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   align-items: flex-start;
   margin-top: 100px;
 `;
-Container.displayName = "Container";
+PlayersDetailsWrapper.displayName = "PlayersDetailsWrapper";
 
 export const OuterFootballField = styled.div`
   position: absolute;

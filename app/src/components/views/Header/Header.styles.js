@@ -1,7 +1,7 @@
 import { styled } from "frontity";
 import Link from "../../core/Link/LinkComponent";
 
-export const Container = styled.div`
+export const HeaderSection = styled.header`
   width: 100%;
   box-sizing: border-box;
   padding: 10px 30px;
@@ -9,18 +9,28 @@ export const Container = styled.div`
   display: flex;
   flex-direction: line;
   justify-content: space-between;
-  height: 10px;
+  height: 50px;
+
+  @media all and (min-width: 768px) {
+    height: 10px;
+  }
 `;
-Container.displayName = "Container";
+HeaderSection.displayName = "HeaderSection";
 
 export const Title = styled.h2`
   position: absolute;
-  right: 2vw;
+  right: 60px;
   top: -40px;
   font-family: RunesFont;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   opacity: 0.1;
+
+  @media all and (min-width: 768px) {
+    right: 2vw;
+    top: -40px;
+    font-size: 3rem;
+  }
 `;
 Title.displayName = "Title";
 
@@ -53,10 +63,14 @@ export const LoginButton = styled.div`
 `;
 LoginButton.displayName = "LoginButton";
 
-export const SmallLogo = styled.img`
-  margin-top: 10px;
-  height: 40px;
-  width: 40px;
-  opacity: 0.8;
+export const HeaderLogo = styled.img`
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 80px;
+  width: 80px;
+  @media all and (min-width: 768px) {
+    display: none;
+  }
 `;
-SmallLogo.displayName = "SmallLogo";
+HeaderLogo.displayName = "HeaderLogo";

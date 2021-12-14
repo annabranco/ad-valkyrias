@@ -1,12 +1,12 @@
 import { styled } from "frontity";
 import Link from "../Link/LinkComponent";
 
-export const Container = styled.div`
+export const PostWrapper = styled.div`
   width: 800px;
   margin: 0;
   padding: 24px;
 `;
-Container.displayName = "Container";
+PostWrapper.displayName = "PostWrapper";
 
 export const Title = styled.h1`
   margin: 0;

@@ -1,13 +1,13 @@
 import React from "react";
 import PlayerDetails from "./PlayerDetails/PlayerDetails";
 import Post from "../../core/Post/Post";
-import { Container } from "./Players.styles";
+import { PlayersArea } from "./Players.styles";
 
 const Players = () => (
-  <Container>
+  <PlayersArea>
     <Post />
     <PlayerDetails />
-  </Container>
+  </PlayersArea>
 );
 
 export default Players;

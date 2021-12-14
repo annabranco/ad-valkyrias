@@ -3,7 +3,7 @@ import { connect } from "frontity";
 import { playerData } from "../utils";
 import Link from "../../../core/Link/LinkComponent";
 import {
-  Container,
+  PlayersListWrapper,
   Shirt,
   PlayerNumber,
   PlayerName,
@@ -16,7 +16,7 @@ const PlayersList = ({ state }) => {
     .sort((a, b) => a.shirt - b.shirt);
   return (
     <>
-      <Container>
+      <PlayersListWrapper>
         {players &&
           players.map((player) => (
             <Shirt
@@ -40,7 +40,7 @@ const PlayersList = ({ state }) => {
               </Link>
             </Shirt>
           ))}
-      </Container>
+      </PlayersListWrapper>
     </>
   );
 };

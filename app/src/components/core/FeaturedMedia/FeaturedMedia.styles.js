@@ -1,12 +1,12 @@
 import { styled } from "frontity";
 import Image from "@frontity/components/image";
 
-export const Container = styled.div`
+export const FeaturedContainer = styled.div`
   margin-top: 16px;
   height: 300px;
   ${({ isAmp }) => isAmp && "position: relative;"};
 `;
-Container.displayName = "Container";
+FeaturedContainer.displayName = "FeaturedContainer";
 
 export const StyledImage = styled(Image)`
   display: block;

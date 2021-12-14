@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "frontity";
 import { ShirtPlayer, ShirtGK } from "../../../../assets/images";
 
-export const Container = styled.div`
+export const PlayersListWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   left: 0;
   margin-left: 15vw;
 `;
-Container.displayName = "Container";
+PlayersListWrapper.displayName = "PlayersListWrapper";
 
 export const Shirt = styled.div`
   background-image: url(${({ position }) =>
