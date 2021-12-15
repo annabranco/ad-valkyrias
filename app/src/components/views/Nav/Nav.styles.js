@@ -1,4 +1,5 @@
-import { styled } from "frontity";
+import { styled } from 'frontity';
+import { fontFamilyTitle } from '../../../config/globalStyles';
 
 export const NavContainer = styled.nav`
   list-style: none;
@@ -14,14 +15,13 @@ export const NavContainer = styled.nav`
     display: none;
   }
 `;
-NavContainer.displayName = "NavContainer";
+NavContainer.displayName = 'NavContainer';
 
 export const NavItem = styled.div`
   padding: 0;
   margin: 0 20px;
   color: #fff;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   box-sizing: border-box;
   flex-shrink: 0;
 
@@ -30,7 +30,7 @@ export const NavItem = styled.div`
     line-height: 2em;
     border-bottom: 2px solid;
     border-bottom-color: transparent;
-    &[aria-current="page"] {
+    &[aria-current='page'] {
       border-bottom-color: #fff;
     }
   }
@@ -43,10 +43,10 @@ export const NavItem = styled.div`
     margin-right: 0;
 
     &:after {
-      content: "";
+      content: '';
       display: inline-block;
       width: 24px;
     }
   }
 `;
-NavItem.displayName = "NavItem";
+NavItem.displayName = 'NavItem';

@@ -1,5 +1,6 @@
-import { styled } from "frontity";
-import Link from "../Link/LinkComponent";
+import { styled } from 'frontity';
+import { fontFamilyMainTitle, fontFamilyTitle } from '../../../config/globalStyles';
+import Link from '../Link/LinkComponent';
 
 export const MenuOverlay = styled.div`
   background-image: linear-gradient(to bottom, #004d00, mediumseagreen);
@@ -12,13 +13,13 @@ export const MenuOverlay = styled.div`
   top: 0;
   left: 0;
 `;
-MenuOverlay.displayName = "MenuOverlay";
+MenuOverlay.displayName = 'MenuOverlay';
 
 export const MenuContent = styled.div`
   z-index: 3;
   position: relative;
 `;
-MenuContent.displayName = "MenuContent";
+MenuContent.displayName = 'MenuContent';
 
 export const MenuLink = styled(Link)`
   width: 100%;
@@ -28,19 +29,19 @@ export const MenuLink = styled(Link)`
   text-align: center;
   margin-bottom: 20px;
   text-transform: uppercase;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: ${fontFamilyTitle};
 
   &:hover,
   &:focus {
     background-color: rgba(0, 0, 0, 0.05);
   }
   /* styles for active link */
-  &[aria-current="page"] {
+  &[aria-current='page'] {
     color: yellow;
     font-weight: bold;
   }
 `;
-MenuLink.displayName = "MenuLink";
+MenuLink.displayName = 'MenuLink';
 
 export const ModalTitleWrapper = styled.div`
   display: flex;
@@ -49,21 +50,21 @@ export const ModalTitleWrapper = styled.div`
   justify-content: center;
   width: 100%;
 `;
-ModalTitleWrapper.displayName = "ModalTitleWrapper";
+ModalTitleWrapper.displayName = 'ModalTitleWrapper';
 
 export const ModalTitle = styled.p`
   z-index: 3;
-  font-family: RunesFont;
+  font-family: ${fontFamilyMainTitle};
   font-size: 2.5rem;
   color: white;
   margin: 20px auto 20px;
   text-align: center;
 `;
-ModalTitle.displayName = "ModalTitle";
+ModalTitle.displayName = 'ModalTitle';
 
 export const ModalLogo = styled.img`
   height: 150px;
   width: 150px;
   margin: 0 auto 20px;
 `;
-ModalLogo.displayName = "ModalLogo";
+ModalLogo.displayName = 'ModalLogo';

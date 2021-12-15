@@ -1,5 +1,5 @@
-import { css } from "frontity";
-import RunesFont from "../assets/comic-runes.ttf";
+import { css } from 'frontity';
+import RunesFont from '../assets/comic-runes.ttf';
 
 export const globalStyles = css`
   @font-face {
@@ -9,8 +9,7 @@ export const globalStyles = css`
 
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Barlow', sans-serif;
     overflow: auto;
   }
   a,
@@ -18,4 +17,14 @@ export const globalStyles = css`
     color: inherit;
     text-decoration: none;
   }
+  div,
+  head,
+  main,
+  section {
+    box-sizing: border-box;
+  }
 `;
+
+export const fontFamilyMainTitle = 'RunesFont, serif';
+
+export const fontFamilyTitle = "'Bebas Neue', sans-serif";

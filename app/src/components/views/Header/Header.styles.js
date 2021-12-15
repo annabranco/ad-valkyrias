@@ -1,5 +1,6 @@
-import { styled } from "frontity";
-import Link from "../../core/Link/LinkComponent";
+import { styled } from 'frontity';
+import { fontFamilyMainTitle } from '../../../config/globalStyles';
+import Link from '../../core/Link/LinkComponent';
 
 export const HeaderSection = styled.header`
   width: 100%;
@@ -15,35 +16,35 @@ export const HeaderSection = styled.header`
     height: 10px;
   }
 `;
-HeaderSection.displayName = "HeaderSection";
+HeaderSection.displayName = 'HeaderSection';
 
 export const Title = styled.h2`
   position: absolute;
   right: 60px;
-  top: -40px;
-  font-family: RunesFont;
+  top: -35px;
+  font-family: ${fontFamilyMainTitle};
   font-size: 2.5rem;
   color: white;
   opacity: 0.1;
 
   @media all and (min-width: 768px) {
     right: 2vw;
-    top: -40px;
+    top: -45px;
     font-size: 3rem;
   }
 `;
-Title.displayName = "Title";
+Title.displayName = 'Title';
 
 export const Description = styled.h4`
   margin: 0;
   color: rgba(255, 255, 255, 0.7);
 `;
-Description.displayName = "Description";
+Description.displayName = 'Description';
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
-StyledLink.displayName = "StyledLink";
+StyledLink.displayName = 'StyledLink';
 
 export const LoginButton = styled.div`
   background-image: linear-gradient(to left, gray, lightgray);
@@ -61,7 +62,7 @@ export const LoginButton = styled.div`
     color: gold;
   }
 `;
-LoginButton.displayName = "LoginButton";
+LoginButton.displayName = 'LoginButton';
 
 export const HeaderLogo = styled.img`
   position: absolute;
@@ -73,4 +74,4 @@ export const HeaderLogo = styled.img`
     display: none;
   }
 `;
-HeaderLogo.displayName = "HeaderLogo";
+HeaderLogo.displayName = 'HeaderLogo';

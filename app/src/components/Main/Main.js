@@ -20,7 +20,7 @@ const Main = ({ state }) => {
       <Head>
         <title>{state.frontity.title}</title>
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
+        <html lang="en" class="notranslate" translate="no" />
         <link
           href="https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Averia+Serif+Libre|Barlow&display=swap"
           rel="stylesheet"
@@ -34,6 +34,7 @@ const Main = ({ state }) => {
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;700"
           rel="stylesheet"
         />
+        <meta name="google" content="notranslate" />
       </Head>
       <Global styles={globalStyles} />
       <ScreenArea>

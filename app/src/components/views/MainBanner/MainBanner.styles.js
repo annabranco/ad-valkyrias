@@ -1,15 +1,13 @@
-import { styled } from "frontity";
-import Link from "../../core/Link/LinkComponent";
+import { styled } from 'frontity';
+import { fontFamilyTitle } from '../../../config/globalStyles';
+import Link from '../../core/Link/LinkComponent';
 
 export const HomeContainer = styled.div`
   position: absolute;
   z-index: 4;
   top: 50px;
   left: 0;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.7),
-    rgba(145, 236, 168, 0.4)
-  );
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(145, 236, 168, 0.4));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 30px;
@@ -36,7 +34,7 @@ export const HomeContainer = styled.div`
     justify-content: flex-start;
   }
 `;
-HomeContainer.displayName = "HomeContainer";
+HomeContainer.displayName = 'HomeContainer';
 
 export const HomeLogo = styled.img`
   display: none;
@@ -49,12 +47,12 @@ export const HomeLogo = styled.img`
     margin-bottom: 100px;
   }
 `;
-HomeLogo.displayName = "HomeLogo";
+HomeLogo.displayName = 'HomeLogo';
 
 export const HomeTitle = styled.h1`
   margin-top: 0;
   line-height: 5px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: ${fontFamilyTitle};
   font-size: 1.3em;
   font-weight: 400;
   line-height: 0.9;
@@ -82,20 +80,19 @@ export const HomeTitle = styled.h1`
     }
   }
 `;
-HomeTitle.displayName = "HomeTitle";
+HomeTitle.displayName = 'HomeTitle';
 
 export const AuthorInfo = styled.p`
   color: white;
   font-size: 0.9rem;
-  font-family: "Barlow", sans-serif;
   text-shadow: 0 0 1px black;
 `;
-AuthorInfo.displayName = "AuthorInfo";
+AuthorInfo.displayName = 'AuthorInfo';
 
 export const City = styled.p`
   color: crimson;
   font-size: 0.8rem;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   text-shadow: 0 0 1px black;
   text-transform: uppercase;
   margin-top: -18px;
@@ -108,7 +105,7 @@ export const City = styled.p`
     letter-spacing: 5px;
   }
 `;
-City.displayName = "City";
+City.displayName = 'City';
 
 export const StyledLink = styled(Link)`
   font-size: 1rem;
@@ -116,7 +113,7 @@ export const StyledLink = styled(Link)`
     color: yellow;
   }
 `;
-StyledLink.displayName = "StyledLink";
+StyledLink.displayName = 'StyledLink';
 
 export const TitleWrapper = styled.div`
   display: flex;
@@ -129,4 +126,4 @@ export const TitleWrapper = styled.div`
     align-items: center;
   }
 `;
-TitleWrapper.displayName = "TitleWrapper";
+TitleWrapper.displayName = 'TitleWrapper';

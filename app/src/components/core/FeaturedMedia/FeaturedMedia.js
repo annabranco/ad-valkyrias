@@ -1,5 +1,5 @@
-import { connect } from "frontity";
-import { FeaturedContainer, StyledImage } from "./FeaturedMedia.styles";
+import { connect } from 'frontity';
+import { FeaturedContainer, StyledImage } from './FeaturedMedia.styles';
 
 const FeaturedMedia = ({ state, id }) => {
   const media = state.source.attachment[id];
@@ -8,17 +8,15 @@ const FeaturedMedia = ({ state, id }) => {
 
   const srcset =
     Object.values(media.media_details.sizes)
-      .map((item) => [item.source_url, item.width])
+      .map(item => [item.source_url, item.width])
       .reduce(
         (final, current, index, array) =>
-          final.concat(
-            `${current.join(" ")}w${index !== array.length - 1 ? ", " : ""}`
-          ),
-        ""
+          final.concat(`${current.join(' ')}w${index !== array.length - 1 ? ', ' : ''}`),
+        '',
       ) || null;
 
   return (
-    <FeaturedContainer isAmp={state.frontity.mode === "amp"}>
+    <FeaturedContainer isAmp={state.frontity.mode === 'amp'}>
       <StyledImage
         alt={media.title.rendered}
         src={media.source_url}

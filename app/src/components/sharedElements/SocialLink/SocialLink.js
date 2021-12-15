@@ -1,25 +1,25 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
-import { string, func } from "prop-types";
-import { SocialLinkButton, SocialLogo } from "./SocialLink.styles";
+import React from 'react';
+import { string, func } from 'prop-types';
+import { SocialLinkButton, SocialLogo } from './SocialLink.styles';
 
-const SocialLink = ({ link = "", onClick, type }) => {
+const SocialLink = ({ link = '', onClick, type }) => {
   let icon;
   switch (type) {
-    case "Facebook":
-      icon = "facebook-f";
+    case 'Facebook':
+      icon = 'facebook-f';
       break;
-    case "Twitter":
-      icon = "twitter";
+    case 'Twitter':
+      icon = 'twitter';
       break;
-    case "Instagram":
-      icon = "instagram";
+    case 'Instagram':
+      icon = 'instagram';
       break;
-    case "Youtube":
-      icon = "youtube";
+    case 'Youtube':
+      icon = 'youtube';
       break;
-    case "Email":
-      icon = "envelope";
+    case 'Email':
+      icon = 'envelope';
       break;
     default:
       break;
@@ -27,7 +27,7 @@ const SocialLink = ({ link = "", onClick, type }) => {
 
   return (
     <SocialLinkButton href={link} rel="noreferrer" target="_blank">
-      <SocialLogo onClick={onClick} icon={["fab", icon]} />
+      <SocialLogo onClick={onClick} icon={['fab', icon]} type={type} />
     </SocialLinkButton>
   );
 };
