@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "frontity";
 
-export const Container = styled.div`
+export const PlayerPageWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
   padding: 10px 30px;
@@ -11,7 +11,7 @@ export const Container = styled.div`
   justify-content: space-between;
   height: 40px;
 `;
-Container.displayName = "Container";
+PlayerPageWrapper.displayName = "PlayerPageWrapper";
 
 export const Title = styled.h2`
   margin-top: -5px;

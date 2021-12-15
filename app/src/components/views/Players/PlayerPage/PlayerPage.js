@@ -1,11 +1,11 @@
 import React from "react";
 import PlayerDetails from "../PlayerDetails/PlayerDetails";
-import { Container } from "./PlayerPage.styles";
+import { PlayerPageWrapper } from "./PlayerPage.styles";
 
 const PlayerPage = () => (
-  <Container>
+  <PlayerPageWrapper>
     <PlayerDetails />
-  </Container>
+  </PlayerPageWrapper>
 );
 
 export default PlayerPage;

@@ -1,17 +1,25 @@
 import React from "react";
+import { connect } from "frontity";
+
 import { Logo } from "../../../assets/images";
-import { City, HomeContainer, HomeLogo, HomeTitle } from "./MainBanner.styles";
+import {
+  City,
+  HomeContainer,
+  HomeLogo,
+  HomeTitle,
+  TitleWrapper,
+} from "./MainBanner.styles";
 
 const MainBanner = () => (
   <HomeContainer>
     <HomeLogo src={Logo} alt="A.D. Valkyrias shield" />
-    <div>
+    <TitleWrapper>
       <HomeTitle>
         Asociación Deportiva <span>Valkyrias</span>
       </HomeTitle>
       <City>Madrid</City>
-    </div>
+    </TitleWrapper>
   </HomeContainer>
 );
 
-export default MainBanner;
+export default connect(MainBanner);

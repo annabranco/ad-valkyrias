@@ -19,7 +19,7 @@ export const Bar = (index) => css`
 `;
 Bar.displayName = "Bar";
 
-export const Container = styled.div`
+export const LoadingContainer = styled.div`
   width: 800px;
   margin: 0;
   padding: 24px;
@@ -31,4 +31,4 @@ export const Container = styled.div`
     margin-top: 24px;
   }
 `;
-Container.displayName = "Container";
+LoadingContainer.displayName = "LoadingContainer";

@@ -1,7 +1,7 @@
-import { connect } from "frontity";
-import Link from "../Link/LinkComponent";
-import FeaturedMedia from "../../core/FeaturedMedia/FeaturedMedia";
-import { Title, PublishDate, Excerpt } from "./styles";
+import { connect } from 'frontity';
+import Link from '../Link/LinkComponent';
+import FeaturedMedia from '../../core/FeaturedMedia/FeaturedMedia';
+import { Title, PublishDate, Excerpt } from './styles';
 
 const Item = ({ state, item }) => {
   const date = new Date(item.date);
@@ -18,13 +18,11 @@ const Item = ({ state, item }) => {
         </PublishDate>
       </div>
 
-      {state.theme.featured.showOnList && (
-        <FeaturedMedia id={item.featured_media} />
-      )}
+      <Link link={item.link}>
+        {state.theme.featured.showOnList && <FeaturedMedia id={item.featured_media} />}
 
-      {item.excerpt && (
-        <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
-      )}
+        {item.excerpt && <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />}
+      </Link>
     </article>
   );
 };

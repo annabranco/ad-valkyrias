@@ -1,6 +1,6 @@
 import { styled } from "frontity";
 
-export const Container = styled.div`
+export const ErrorWrapper = styled.div`
   height: 100%;
   width: 100%;
   margin-top: 10vh;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   justify-content: flex-end;
   overflow: hidden;
 `;
-Container.displayName = "Container";
+ErrorWrapper.displayName = "ErrorWrapper";
 
 export const Title = styled.h1`
   margin: 0;

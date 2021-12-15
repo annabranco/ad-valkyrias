@@ -1,6 +1,11 @@
 import { connect } from "frontity";
 import { Photo404 } from "../../../assets/images";
-import { Container, Description, Image, Title } from "./ErrorComponent.styles";
+import {
+  ErrorWrapper,
+  Description,
+  Image,
+  Title,
+} from "./ErrorComponent.styles";
 
 const description404 = (
   <>
@@ -26,11 +31,11 @@ const Page404 = ({ state }) => {
   const title404 = "Oh-nooo! 404";
 
   return (
-    <Container>
+    <ErrorWrapper>
       <Title>{data.is404 ? title404 : title}</Title>
       <Description>{data.is404 ? description404 : description}</Description>
       <Image src={Photo404} />
-    </Container>
+    </ErrorWrapper>
   );
 };
 

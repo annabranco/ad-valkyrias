@@ -1,39 +1,44 @@
-import { styled } from "frontity";
-import Link from "../Link/LinkComponent";
+import { styled, css } from 'frontity';
+import Link from '../Link/LinkComponent';
 
-export const Container = styled.div`
-  width: 800px;
+export const PostWrapper = styled.div`
+  width: 100%;
   margin: 0;
   padding: 24px;
 `;
-Container.displayName = "Container";
+PostWrapper.displayName = 'PostWrapper';
 
 export const Title = styled.h1`
+  position: ${({ isPlayer }) => (isPlayer ? 'absolute' : 'unset')};
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
   color: rgba(12, 17, 43);
+
+  @media all and (min-width: 768px) {
+    position: unset;
+  }
 `;
-Title.displayName = "Title";
+Title.displayName = 'Title';
 
 export const StyledLink = styled(Link)`
   padding: 15px 0;
 `;
-StyledLink.displayName = "StyledLink";
+StyledLink.displayName = 'StyledLink';
 
 export const Author = styled.p`
   color: rgba(12, 17, 43, 0.9);
   font-size: 0.9em;
   display: inline;
 `;
-Author.displayName = "Author";
+Author.displayName = 'Author';
 
 export const DateWrapper = styled.p`
   color: rgba(12, 17, 43, 0.9);
   font-size: 0.9em;
   display: inline;
 `;
-DateWrapper.displayName = "DateWrapper";
+DateWrapper.displayName = 'DateWrapper';
 
 /**
  * This component is the parent of the `content.rendered` HTML. We can use nested
@@ -87,12 +92,12 @@ export const Content = styled.div`
 
   /* Input fields styles */
 
-  input[type="text"],
-  input[type="email"],
-  input[type="url"],
-  input[type="tel"],
-  input[type="number"],
-  input[type="date"],
+  input[type='text'],
+  input[type='email'],
+  input[type='url'],
+  input[type='tel'],
+  input[type='number'],
+  input[type='date'],
   textarea,
   select {
     display: block;
@@ -114,7 +119,7 @@ export const Content = styled.div`
     }
   }
 
-  input[type="submit"] {
+  input[type='submit'] {
     display: inline-block;
     margin-bottom: 0;
     font-weight: 400;
@@ -159,5 +164,15 @@ export const Content = styled.div`
       margin-right: 24px;
     }
   }
+
+  ${({ isPlayer }) =>
+    isPlayer &&
+    css`
+      margin-top: 80px;
+
+      @media all and (min-width: 768px) {
+        margin-top: 0;
+      }
+    `}
 `;
-Content.displayName = "Content";
+Content.displayName = 'Content';

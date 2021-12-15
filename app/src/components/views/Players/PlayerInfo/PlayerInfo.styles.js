@@ -1,6 +1,6 @@
 import { styled } from "frontity";
 
-export const Container = styled.div`
+export const PlayersArea = styled.div`
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -13,4 +13,4 @@ export const Container = styled.div`
   align-items: flex-start;
   overflow: hidden;
 `;
-Container.displayName = "Container";
+PlayersArea.displayName = "PlayersArea";

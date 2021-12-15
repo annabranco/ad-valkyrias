@@ -1,5 +1,13 @@
 import { connect, useConnect } from "frontity";
-import { MenuOverlay, MenuContent, MenuLink } from "./AppModal.styles";
+import { Logo } from "../../../assets/images";
+import {
+  MenuOverlay,
+  MenuContent,
+  ModalTitle,
+  MenuLink,
+  ModalLogo,
+  ModalTitleWrapper,
+} from "./AppModal.styles";
 
 const AppModal = ({ ...props }) => {
   const { state } = useConnect();
@@ -10,6 +18,10 @@ const AppModal = ({ ...props }) => {
     <div {...props}>
       {state.frontity.mode !== "amp" && <MenuOverlay />}
       <MenuContent as="nav">
+        <ModalTitleWrapper>
+          <ModalTitle>A.D. Valkyrias</ModalTitle>
+          <ModalLogo src={Logo} alt="Valkyrias logo" />
+        </ModalTitleWrapper>
         {isThereLinks &&
           menu.map(([name, link]) => (
             <MenuLink
