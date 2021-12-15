@@ -12,8 +12,10 @@ import {
 const PlayersList = ({ state }) => {
   const data = state.source.get("/players/");
   const players = data.items
+
     .map((item) => playerData(state.source.page[item.id]))
     .sort((a, b) => a.shirt - b.shirt);
+  console.log("$$$ players", players);
   return (
     <>
       <PlayersListWrapper>

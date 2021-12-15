@@ -2,9 +2,13 @@ import { styled } from "frontity";
 import Link from "../Link/LinkComponent";
 
 export const PostWrapper = styled.div`
-  width: 800px;
+  width: 90%;
   margin: 0;
   padding: 24px;
+
+  @media all and (min-width: 768px) {
+    width: 800px;
+  }
 `;
 PostWrapper.displayName = "PostWrapper";
 

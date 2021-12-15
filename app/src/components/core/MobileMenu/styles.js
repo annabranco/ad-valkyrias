@@ -2,14 +2,14 @@ import { styled } from "frontity";
 
 export const MenuToggle = styled.button`
   position: absolute;
-  right: 10px;
+  right: 2vw;
   top: 5px;
   background: transparent;
   border: 0;
   color: white;
-  z-index: 5;
-  height: 40px;
-  width: 40px;
+  z-index: 15;
+  height: 12vw;
+  width: 12vw;
   display: none;
 
   @media (max-width: 560px) {

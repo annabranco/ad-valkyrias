@@ -1,16 +1,17 @@
-import React from "react";
-import { Global, connect, Head } from "frontity";
-import List from "../core/List";
-import ErrorPage from "../core/ErrorComponent/ErrorComponent";
-import Loading from "../core/Loading/Loading";
-import Post from "../core/Post/Post";
-import Header from "../views/Header/Header";
-import Players from "../views/Players/Players";
-import PlayersList from "../views/Players/PlayersList/PlayersList";
-import MainBanner from "../views/MainBanner/MainBanner";
-import { IconMedium, IconSmall, IconTiny } from "../../assets/images";
-import { ScreenArea, HeadContainer, Body, MainArea } from "./Main.styles";
-import { globalStyles } from "../../config/globalStyles";
+import React from 'react';
+import { Global, connect, Head } from 'frontity';
+import List from '../core/List';
+import ErrorPage from '../core/ErrorComponent/ErrorComponent';
+import Loading from '../core/Loading/Loading';
+import Post from '../core/Post/Post';
+import Header from '../views/Header/Header';
+import PlayerInfo from '../views/Players/PlayerInfo/PlayerInfo';
+import PlayersList from '../views/Players/PlayersList/PlayersList';
+import MainBanner from '../views/MainBanner/MainBanner';
+import { IconMedium, IconSmall, IconTiny } from '../../assets/images';
+import { ScreenArea, HeadContainer, Body, MainArea } from './Main.styles';
+import { globalStyles } from '../../config/globalStyles';
+
 const Main = ({ state }) => {
   const data = state.source.get(state.router.link);
 
@@ -28,12 +29,7 @@ const Main = ({ state }) => {
         <link rel="icon" type="image/png" href={IconTiny} sizes="16x16" />
         <link rel="icon" type="image/png" href={IconSmall} sizes="32x32" />
         <link rel="icon" type="image/png" href={IconMedium} sizes="64x64" />
-        <link
-          rel="shortcut icon"
-          type="image/png"
-          href={IconMedium}
-          sizes="192x192"
-        />
+        <link rel="shortcut icon" type="image/png" href={IconMedium} sizes="192x192" />
         <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;700"
           rel="stylesheet"
@@ -53,11 +49,11 @@ const Main = ({ state }) => {
             {data.isPlayersPage && <PlayersList />}
             {data.isPlayer && (
               <>
-                <Players />
+                <PlayerInfo />
                 <PlayersList />
               </>
             )}
-            {data.is404 && <ErrorPage />}
+            {data.isError && <ErrorPage />}
           </MainArea>
         </Body>
       </ScreenArea>

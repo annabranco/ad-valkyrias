@@ -14,7 +14,7 @@ export const HomeContainer = styled.div`
   background-repeat: no-repeat;
   height: 30px;
   width: 100%;
-  padding-top: 30px;
+  padding: 30px 10px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ export const HomeContainer = styled.div`
   @media all and (min-width: 768px) {
     position: fixed;
     z-index: 4;
-    padding-top: 10vh;
+    padding: 10vh 0 0;
     bottom: unset;
     left: unset;
     height: 100%;

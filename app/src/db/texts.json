@@ -1,0 +1,18 @@
+{
+    "en": {
+        "error": {
+            "errorLine1": "I'm awfully sorry but something unexpected had happened. :(",
+            "errorLine2": "I'd really appreciate if you could notify me of this error on my issues page.",
+            "notifyMe": "Notify me",
+            "title": "That's embarassing..."
+        }
+    },
+    "es": {
+        "error": {
+            "errorLine1": "Lo siento mucho, pero algo inesperado ha pasado. :(",
+            "errorLine2": "Te agradecería mucho si pudieras notificarme en mi páginas de incidencias.",
+            "notifyMe": "Notificármelo",
+            "title": "Es vergonzoso..."
+        }
+    }
+}
