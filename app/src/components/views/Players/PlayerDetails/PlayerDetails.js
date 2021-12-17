@@ -42,7 +42,7 @@ const PlayerDetails = ({ state }) => {
             {player.city}
             <CountryFlag src={countryFlag} alt={`Flag of ${player.country}`} />
           </ContainerPlayerCity>
-          <ContainerPlayerSince>Desde {player.since}</ContainerPlayerSince>
+          {player.since && <ContainerPlayerSince>Desde {player.since}</ContainerPlayerSince>}
           <ContainerPlayerNetworking>
             {player.instagram && <SocialLink link={player.instagram} type="Instagram" />}
             {player.facebook && <SocialLink link={player.facebook} type="Facebook" />}

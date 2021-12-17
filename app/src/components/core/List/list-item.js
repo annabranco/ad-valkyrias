@@ -5,6 +5,7 @@ import { Title, PublishDate, Excerpt } from './styles';
 
 const Item = ({ state, item }) => {
   const date = new Date(item.date);
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
     <article>
@@ -14,7 +15,7 @@ const Item = ({ state, item }) => {
 
       <div>
         <PublishDate>
-          <b>{date.toDateString()}</b>
+          <b>{date.toLocaleDateString('es', options)}</b>
         </PublishDate>
       </div>
 
