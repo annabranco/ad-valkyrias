@@ -5,18 +5,17 @@ import Link from '../../../core/Link/LinkComponent';
 import { PlayersListWrapper, Shirt, PlayerNumber, PlayerName } from './PlayersList.styles';
 
 const PlayersList = ({ state, actions }) => {
-  const data = state.source.get('/players/');
+  const data = state.source.get('/senior/');
   const { players } = state;
   const { updatePlayers } = actions.players;
   const playersList =
-    players || data.items.map(item => playerData(state.source.page[item.id])).sort((a, b) => a.shirt - b.shirt);
+    players || data?.items?.map(item => playerData(state.source.page[item.id])).sort((a, b) => a.shirt - b.shirt);
 
   useEffect(() => {
     if (!players) {
-      const updatedPlayers = data.items
+      const updatedPlayers = data?.items
         .map(item => playerData(state.source.page[item.id]))
         .sort((a, b) => a.shirt - b.shirt);
-      console.log('$$$ updatedPlayers', updatedPlayers);
       updatePlayers({ updatedPlayers });
     }
   }, [state, actions]);

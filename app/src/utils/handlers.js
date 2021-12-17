@@ -1,17 +1,17 @@
 export const players = {
   priority: 8,
-  pattern: "/players/",
+  pattern: '/senior/',
   func: async ({ route, params, state, libraries }) => {
     // 1. get all pages with parent "players".
     const playersList = await libraries.source.api.get({
-      endpoint: "pages",
-      params: { parent: 48 },
+      endpoint: 'pages',
+      params: { parent: 20 },
     });
 
     // 1. get "players" page itself.
     const playersPage = await libraries.source.api.get({
-      endpoint: "pages",
-      params: { include: 48 },
+      endpoint: 'pages',
+      params: { include: 20 },
     });
 
     // 2. add everything to the state.
@@ -23,30 +23,31 @@ export const players = {
       response: playersPage,
       state,
     });
-
+    if (page) {
+      Object.assign(state.source.data[route], {
+        isPlayersPage: true,
+        isPostType: true,
+        type: 'page',
+        id: page.id,
+        items: items.map(item => ({
+          type: item.type,
+          id: item.id,
+          link: item.link,
+        })),
+      });
+    }
     // 3. add info to data
-    Object.assign(state.source.data[route], {
-      isPlayersPage: true,
-      isPostType: true,
-      type: "page",
-      id: page.id,
-      items: items.map((item) => ({
-        type: item.type,
-        id: item.id,
-        link: item.link,
-      })),
-    });
   },
 };
 
 export const player = {
   priority: 9,
-  pattern: "/players/:slug",
+  pattern: '/senior/:slug',
   func: async ({ route, params, state, libraries }) => {
     // 1. get page with that slug.
     const response = await libraries.source.api.get({
-      endpoint: "pages",
-      params: { parent: 48, slug: params.slug },
+      endpoint: 'pages',
+      params: { parent: 20, slug: params.slug },
     });
 
     // 2. add it to the state.

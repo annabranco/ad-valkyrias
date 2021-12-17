@@ -55,6 +55,7 @@ export const Content = styled.div`
 
   p {
     line-height: 1.6em;
+    text-align: justify;
   }
 
   img {

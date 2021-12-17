@@ -13,7 +13,8 @@ library.add(fab, faEnvelope, faFutbol);
 const before = async ({ libraries, actions }) => {
   libraries.html2react.processors.push(image);
   libraries.source.handlers.push(players, player);
-  await actions.source.fetch('/players');
+  await actions.source.fetch('/home');
+  await actions.source.fetch('/senior');
 };
 
 const App = {
@@ -35,8 +36,6 @@ const App = {
       updatePlayers:
         ({ state }) =>
         updatedPlayers => {
-          console.log('$$$ AC updatedPlayers', updatedPlayers);
-
           state.players = updatedPlayers.updatedPlayers || updatedPlayers;
         },
     },

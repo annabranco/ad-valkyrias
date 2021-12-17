@@ -6,11 +6,7 @@ import { PostWrapper, Title, StyledLink, Author, DateWrapper, Content } from './
 
 const Post = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
-  console.log('$$$ data', data);
-
   const post = state.source[data.type][data.id];
-  console.log('$$$ post', post);
-
   const date = new Date(post.date);
   const Html2React = libraries.html2react.Component;
 
@@ -21,13 +17,17 @@ const Post = ({ state, actions, libraries }) => {
 
   return data.isReady ? (
     <PostWrapper>
-      <div>
-        <Title
-          dangerouslySetInnerHTML={{ __html: data.isPlayer ? post.title.rendered.toUpperCase() : post.title.rendered }}
-          isPlayer={data.isPlayer}
-        />
+      {!data.isPage && (
+        <div>
+          {!data.isPlayersPage && (
+            <Title
+              dangerouslySetInnerHTML={{
+                __html: data.isPlayer ? post.title.rendered.toUpperCase() : post.title.rendered,
+              }}
+              isPlayer={data.isPlayer}
+            />
+          )}
 
-        {!data.isPage && (
           <div>
             {!data.isPlayer && !data.isPlayersPage && (
               <DateWrapper>
@@ -35,8 +35,8 @@ const Post = ({ state, actions, libraries }) => {
               </DateWrapper>
             )}
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {state.theme.featured.showOnPost && <FeaturedMedia id={post.featured_media} />}
 

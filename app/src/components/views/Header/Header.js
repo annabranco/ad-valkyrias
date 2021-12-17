@@ -1,6 +1,7 @@
 import { connect } from 'frontity';
 import Nav from '../Nav/Nav';
 import MobileMenu from '../../core/MobileMenu/menu';
+import Link from '../../core/Link/LinkComponent';
 import { Logo } from '../../../assets/images';
 import { HeaderSection, HeaderLogo, Title } from './Header.styles';
 
@@ -8,9 +9,13 @@ const Header = ({ state }) => {
   return (
     <>
       <HeaderSection>
-        <Title>Valkyrias</Title>
+        <Link link="/home">
+          <Title>Valkyrias</Title>
+        </Link>
         <MobileMenu />
-        <HeaderLogo src={Logo} alt="Valkyrias logo" />
+        <Link link="/home">
+          <HeaderLogo src={Logo} alt="Valkyrias logo" />
+        </Link>
       </HeaderSection>
       <Nav />
     </>
