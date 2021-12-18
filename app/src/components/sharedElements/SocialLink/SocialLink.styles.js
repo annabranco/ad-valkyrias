@@ -1,5 +1,6 @@
 import { styled, css } from 'frontity';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE, EMAIL } from '../../../constants/social';
 
 export const SocialLogo = styled(FontAwesomeIcon)`
   margin: 0 10px;
@@ -12,17 +13,17 @@ export const SocialLogo = styled(FontAwesomeIcon)`
   }
 
   ${({ type }) => {
-    if (type === 'Instagram') {
+    if (type === INSTAGRAM) {
       return css`
         color: red;
       `;
     }
-    if (type === 'Facebook') {
+    if (type === FACEBOOK) {
       return css`
         color: blue;
       `;
     }
-    if (type === 'Twitter') {
+    if (type === TWITTER) {
       return css`
         color: lightblue;
       `;
@@ -39,7 +40,19 @@ export const SocialLogo = styled(FontAwesomeIcon)`
 SocialLogo.displayName = 'SocialLogo';
 
 export const SocialLinkButton = styled.a`
+  position: relative;
   text-decoration: none;
   color: black;
+
+  &:hover {
+    &::after {
+      position: absolute;
+      content: '${({ type }) => type.toUpperCase()}';
+      font-size: 0.7rem;
+      left: 50%;
+      top: -50%;
+      transform: translate(-50%, 0);
+    }
+  }
 `;
 SocialLinkButton.displayName = 'SocialLinkButton';

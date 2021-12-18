@@ -1,4 +1,5 @@
 import { styled, css } from 'frontity';
+import { fontFamilyTitle } from '../../../config/globalStyles';
 import Link from '../Link/LinkComponent';
 
 export const PostWrapper = styled.div`
@@ -13,7 +14,9 @@ export const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: rgba(12, 17, 43);
+  color: darkgreen;
+  font-family: ${fontFamilyTitle};
+  font-size: 2.5rem;
 
   @media all and (min-width: 768px) {
     position: unset;
@@ -58,6 +61,13 @@ export const Content = styled.div`
     text-align: justify;
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: darkgreen;
+  }
+
   img {
     width: 100%;
     max-height: 50vh;
@@ -94,7 +104,7 @@ export const Content = styled.div`
   /* Input fields styles */
 
   input[type='text'],
-  input[type='email'],
+  input[type='EMAIL'],
   input[type='url'],
   input[type='tel'],
   input[type='number'],

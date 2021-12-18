@@ -18,6 +18,7 @@ import {
   PlayerPosition,
   PlayerDetailsInfo,
 } from './PlayerDetails.styles';
+import { FACEBOOK, INSTAGRAM, TWITTER } from '../../../../constants/social';
 
 const PlayerDetails = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -44,9 +45,9 @@ const PlayerDetails = ({ state }) => {
           </ContainerPlayerCity>
           {player.since && <ContainerPlayerSince>Desde {player.since}</ContainerPlayerSince>}
           <ContainerPlayerNetworking>
-            {player.instagram && <SocialLink link={player.instagram} type="Instagram" />}
-            {player.facebook && <SocialLink link={player.facebook} type="Facebook" />}
-            {player.twitter && <SocialLink link={player.twitter} type="Twitter" />}
+            {player.instagram && <SocialLink link={player.instagram} type={INSTAGRAM} />}
+            {player.facebook && <SocialLink link={player.facebook} type={FACEBOOK} />}
+            {player.twitter && <SocialLink link={player.twitter} type={TWITTER} />}
           </ContainerPlayerNetworking>
         </PlayerDetailsInfo>
       </div>
