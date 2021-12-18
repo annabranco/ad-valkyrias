@@ -1,24 +1,24 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE, EMAIL } from '../../../constants/social';
 import { string, func } from 'prop-types';
 import { SocialLinkButton, SocialLogo } from './SocialLink.styles';
 
 const SocialLink = ({ link = '', onClick, type }) => {
   let icon;
   switch (type) {
-    case 'Facebook':
+    case FACEBOOK:
       icon = 'facebook-f';
       break;
-    case 'Twitter':
+    case TWITTER:
       icon = 'twitter';
       break;
-    case 'Instagram':
+    case INSTAGRAM:
       icon = 'instagram';
       break;
-    case 'Youtube':
+    case YOUTUBE:
       icon = 'youtube';
       break;
-    case 'Email':
+    case EMAIL:
       icon = 'envelope';
       break;
     default:
@@ -26,7 +26,7 @@ const SocialLink = ({ link = '', onClick, type }) => {
   }
 
   return (
-    <SocialLinkButton href={link} rel="noreferrer" target="_blank">
+    <SocialLinkButton href={link} rel="noreferrer" target="_blank" type={type}>
       <SocialLogo onClick={onClick} icon={['fab', icon]} type={type} />
     </SocialLinkButton>
   );

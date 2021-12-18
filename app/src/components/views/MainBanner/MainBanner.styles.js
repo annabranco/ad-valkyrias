@@ -57,6 +57,7 @@ export const HomeTitle = styled.h1`
   font-weight: 400;
   line-height: 0.9;
   color: #a8c9a7;
+  user-select: none;
 
   & > span {
     font-size: 1.3rem;
@@ -119,7 +120,7 @@ export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: ;
+  justify-content: center;
   width: 100%;
 
   @media all and (min-width: 768px) {
@@ -127,3 +128,16 @@ export const TitleWrapper = styled.div`
   }
 `;
 TitleWrapper.displayName = 'TitleWrapper';
+
+export const SocialWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @media all and (min-width: 768px) {
+    align-items: center;
+  }
+`;
+SocialWrapper.displayName = 'SocialWrapper';

@@ -2,12 +2,16 @@ import { styled } from 'frontity';
 import Link from '../Link/LinkComponent';
 
 export const Title = styled.h1`
-  font-size: 2rem;
-  color: rgba(12, 17, 43);
-  margin: 0;
-  padding-top: 24px;
-  padding-bottom: 8px;
+  margin: 50px 0 0;
+  height: 25px;
+  width: 90%;
+  padding-top: 24px 0 8px 40px;
   box-sizing: border-box;
+  background: rgba(50, 205, 50, 0.15);
+  border-radius: 0 35px 35px 0;
+  font-size: 2rem;
+  color: darkgreen;
+  line-height: 0;
 `;
 Title.displayName = 'Title';
 
