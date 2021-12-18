@@ -3,7 +3,8 @@ import Link from '../Link/LinkComponent';
 
 export const Title = styled.h1`
   margin: 50px 0 0;
-  height: 25px;
+  min-height: 25px;
+  height: auto;
   width: 90%;
   padding-top: 24px 0 8px 40px;
   box-sizing: border-box;
@@ -11,7 +12,7 @@ export const Title = styled.h1`
   border-radius: 0 35px 35px 0;
   font-size: 2rem;
   color: darkgreen;
-  line-height: 0;
+  line-height: 1;
 `;
 Title.displayName = 'Title';
 
