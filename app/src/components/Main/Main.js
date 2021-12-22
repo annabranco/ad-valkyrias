@@ -1,16 +1,18 @@
 import React from 'react';
 import { Global, connect, Head } from 'frontity';
+import Switch from '@frontity/components/switch';
 import List from '../core/List';
 import ErrorPage from '../core/ErrorComponent/ErrorComponent';
 import Loading from '../core/Loading/Loading';
 import Post from '../core/Post/Post';
 import Header from '../views/Header/Header';
-import PlayerInfo from '../views/Players/PlayerInfo/PlayerInfo';
-import PlayersList from '../views/Players/PlayersList/PlayersList';
 import MainBanner from '../views/MainBanner/MainBanner';
 import { IconMedium, IconSmall, IconTiny } from '../../assets/images';
 import { ScreenArea, HeadContainer, Body, MainArea } from './Main.styles';
 import { globalStyles } from '../../config/globalStyles';
+import PlayersPage from '../views/Players/PlayersPage';
+import PlayersListPage from '../views/Players/PlayersListPage';
+import Home from '../Home/Home';
 
 const Main = ({ state, actions }) => {
   const renderMainPage = () => {
@@ -45,17 +47,17 @@ const Main = ({ state, actions }) => {
           <Body>
             <MainBanner />
             <MainArea>
-              {data.isFetching && <Loading />}
-              {data.isArchive && <List />}
-              {data.isPostType && <Post />}
-              {data.isPlayersPage && <PlayersList />}
-              {data.isPlayer && (
-                <>
-                  <PlayerInfo />
-                  <PlayersList />
-                </>
-              )}
-              {data.isError && <ErrorPage />}
+              <Switch>
+                <Home when={data.link === '/home/'} />
+                <Loading when={data.isFetching} />
+                <PlayersListPage when={data.isPlayersPage}>
+                  <Post />
+                </PlayersListPage>
+                <List when={data.isArchive} />
+                <Post when={data.isPostType} />
+                <PlayersPage when={data.isPlayer} />
+                <ErrorPage when={data.isError} />
+              </Switch>
             </MainArea>
           </Body>
         </ScreenArea>
