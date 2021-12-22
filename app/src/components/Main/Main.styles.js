@@ -1,4 +1,4 @@
-import { styled } from "frontity";
+import { styled } from 'frontity';
 
 export const ScreenArea = styled.div`
   display: flex;

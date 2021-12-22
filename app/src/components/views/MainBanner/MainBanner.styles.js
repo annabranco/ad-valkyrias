@@ -135,8 +135,10 @@ export const SocialWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  display: none;
 
   @media all and (min-width: 768px) {
+    display: block;
     align-items: center;
   }
 `;

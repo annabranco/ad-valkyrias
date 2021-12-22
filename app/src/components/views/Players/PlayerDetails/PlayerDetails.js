@@ -12,11 +12,12 @@ import {
   FootballField,
   PlayerIcon,
   ContainerPlayerCity,
-  ContainerPlayerSince,
+  ContainerPlayerInfo,
   ContainerPlayerNetworking,
   CountryFlag,
   PlayerPosition,
   PlayerDetailsInfo,
+  HiddenOnSmallDevices,
 } from './PlayerDetails.styles';
 import { FACEBOOK, INSTAGRAM, TWITTER } from '../../../../constants/social';
 
@@ -26,31 +27,46 @@ const PlayerDetails = ({ state }) => {
   const country = player.country;
   const countryCode = COUNTRIES[country.toLowerCase()];
   const countryFlag = countryCode ? getFlagURL(countryCode) : RainbowFlag;
+  const playerNumber = typeof player.shirt === 'number' && player.shirt;
 
   return (
     <PlayersDetailsWrapper>
-      <div>
-        <OuterFootballField>
-          <FootballField>
-            <PlayerIcon playerImgPosition={getPlayerImgPosition(player.position)} playerPosition={player.position}>
-              {player.shirt}
-            </PlayerIcon>
-          </FootballField>
-        </OuterFootballField>
-        <PlayerPosition position={player.position}>{POSITIONS.es[player.position]}</PlayerPosition>
-        <PlayerDetailsInfo>
-          <ContainerPlayerCity>
-            {player.city}
-            <CountryFlag src={countryFlag} alt={`Flag of ${player.country}`} />
-          </ContainerPlayerCity>
-          {player.since && <ContainerPlayerSince>Desde {player.since}</ContainerPlayerSince>}
-          <ContainerPlayerNetworking>
-            {player.instagram && <SocialLink link={player.instagram} type={INSTAGRAM} />}
-            {player.facebook && <SocialLink link={player.facebook} type={FACEBOOK} />}
-            {player.twitter && <SocialLink link={player.twitter} type={TWITTER} />}
-          </ContainerPlayerNetworking>
-        </PlayerDetailsInfo>
-      </div>
+      <OuterFootballField>
+        <FootballField>
+          <PlayerIcon playerImgPosition={getPlayerImgPosition(player.position)} playerPosition={player.position}>
+            {playerNumber || player.alias.charAt(0)}
+          </PlayerIcon>
+        </FootballField>
+      </OuterFootballField>
+      <PlayerPosition position={player.position}>{POSITIONS.es[player.position]}</PlayerPosition>
+      <PlayerDetailsInfo>
+        <HiddenOnSmallDevices>Nombre:</HiddenOnSmallDevices>
+        <ContainerPlayerInfo>{player.fullName}</ContainerPlayerInfo>
+        <HiddenOnSmallDevices>De:</HiddenOnSmallDevices>
+        <ContainerPlayerCity>
+          <HiddenOnSmallDevices>{player.city}</HiddenOnSmallDevices>
+          <CountryFlag src={countryFlag} alt={`Flag of ${player.country}`} />
+        </ContainerPlayerCity>
+        {player.since && (
+          <>
+            <span>Desde:</span>
+            <ContainerPlayerInfo>{player.since}</ContainerPlayerInfo>
+          </>
+        )}
+        {player.previousTeams && (
+          <>
+            <HiddenOnSmallDevices>Otros equipos:</HiddenOnSmallDevices>
+            <ContainerPlayerInfo>
+              <HiddenOnSmallDevices>{player.previousTeams}</HiddenOnSmallDevices>
+            </ContainerPlayerInfo>
+          </>
+        )}
+        <ContainerPlayerNetworking>
+          {player.instagram && <SocialLink link={player.instagram} type={INSTAGRAM} />}
+          {player.facebook && <SocialLink link={player.facebook} type={FACEBOOK} />}
+          {player.twitter && <SocialLink link={player.twitter} type={TWITTER} />}
+        </ContainerPlayerNetworking>
+      </PlayerDetailsInfo>
     </PlayersDetailsWrapper>
   );
 };

@@ -1,6 +1,7 @@
-import { styled } from "frontity";
+import { styled } from 'frontity';
 
 export const PlayersArea = styled.div`
+  position: relative;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -11,6 +12,5 @@ export const PlayersArea = styled.div`
   align-items: center;
   justify-content: space-around;
   align-items: flex-start;
-  overflow: hidden;
 `;
-PlayersArea.displayName = "PlayersArea";
+PlayersArea.displayName = 'PlayersArea';

@@ -15,7 +15,29 @@ const PlayersList = ({ state, actions }) => {
     if (!players) {
       const updatedPlayers = data?.items
         .map(item => playerData(state.source.page[item.id]))
-        .sort((a, b) => a.shirt - b.shirt);
+        .sort((a, b) => {
+          if (a.shirt && b.shirt) {
+            if (a.shirt < b.shirt) {
+              return -1;
+            }
+            if (a.shirt > b.shirt) {
+              return 1;
+            }
+          }
+          if (!a.shirt && b.shirt) {
+            return 1;
+          }
+          if (!b.shirt && a.shirt) {
+            return -1;
+          }
+          if (a.alias < b.alias) {
+            return -1;
+          }
+          if (a.alias > b.alias) {
+            return 1;
+          }
+          return 0;
+        });
       updatePlayers({ updatedPlayers });
     }
   }, [state, actions]);
@@ -23,16 +45,18 @@ const PlayersList = ({ state, actions }) => {
   return (
     <PlayersListWrapper>
       {playersList?.map(player => (
-        <Shirt key={player.id} isSelected={state.router.link === player.link} position={player.position}>
-          <Link link={player.link}>
+        <Link link={player.link}>
+          <Shirt key={player.id} isSelected={state.router.link === player.link} position={player.position}>
             <PlayerName letters={player.alias.length} position={player.position}>
               {player.alias}
             </PlayerName>
-            <PlayerNumber letters={player.alias.length} position={player.position}>
-              {player.shirt}
-            </PlayerNumber>
-          </Link>
-        </Shirt>
+            {typeof player.shirt === 'number' && !isNaN(player.shirt) && (
+              <PlayerNumber letters={player.alias.length} position={player.position}>
+                {player.shirt}
+              </PlayerNumber>
+            )}
+          </Shirt>
+        </Link>
       ))}
     </PlayersListWrapper>
   );

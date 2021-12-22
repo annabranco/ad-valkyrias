@@ -5,7 +5,7 @@ export const players = {
     // 1. get all pages with parent "players".
     const playersList = await libraries.source.api.get({
       endpoint: 'pages',
-      params: { parent: 20 },
+      params: { per_page: 40, parent: 20 },
     });
 
     // 1. get "players" page itself.

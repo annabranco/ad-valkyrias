@@ -73,6 +73,20 @@ export const Content = styled.div`
     max-height: 50vh;
     object-fit: cover;
     object-position: center;
+
+    ${({ isPlayer }) =>
+      isPlayer &&
+      css`
+        width: auto;
+        min-width: 30vw;
+        height: 100%;
+        border-radius: 30px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+
+        @media all and (min-width: 768px) {
+          min-width: auto;
+        }
+      `}
   }
 
   figure {

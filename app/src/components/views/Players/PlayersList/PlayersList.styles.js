@@ -3,17 +3,27 @@ import { styled } from 'frontity';
 import { ShirtPlayer, ShirtGK } from '../../../../assets/images';
 
 export const PlayersListWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  z-index: 900;
   position: fixed;
-  flex-wrap: wrap;
   bottom: 0;
-  left: 0;
+  left: 5px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-auto-flow: column;
+  align-items: flex-end;
 
   @media all and (min-width: 768px) {
-    margin-left: 15vw;
+    left: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 200px;
+    overflow: hidden;
+    width: 70%;
   }
 `;
 PlayersListWrapper.displayName = 'PlayersListWrapper';
@@ -28,15 +38,13 @@ export const Shirt = styled.div`
   flex-direction: column;
   align-items: space-around;
   transition: all 0.5s;
+
   &:hover {
     transform: scale(1.2);
-
-    & > p {
-      transform: scale(1.2);
-    }
   }
 
   @media all and (min-width: 768px) {
+    background-size: 100%;
     width: 100px;
     height: 100px;
   }
@@ -52,7 +60,9 @@ export const PlayerNumber = styled.p`
   font-weight: 900;
   transition: all 0.5s;
   opacity: ${({ position }) => (position === 'GK' ? '0.85' : '0.65')};
-  margin-top: ${({ letters }) => (letters > 7 ? '-9px' : '-10px')};
+  margin-top: ${({ letters }) => (letters > 7 ? '-9px' : '-8px')};
+  letter-spacing: -3px;
+  margin-left: -3px;
 
   @media all and (min-width: 768px) {
     font-size: 3rem;
@@ -68,7 +78,7 @@ export const PlayerName = styled.p`
   text-align: center;
   font-size: ${({ letters }) => (letters > 7 ? '0.8rem' : '0.9rem')};
   letter-spacing: ${({ letters }) => (letters > 7 ? '-1px' : 'normal')};
-  margin: 13px 0 0;
+  margin: 8px 0 0;
 
   @media all and (min-width: 768px) {
     font-size: ${({ letters }) => (letters > 7 ? '1.1rem' : '1.2rem')};

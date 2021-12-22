@@ -4,6 +4,8 @@ import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE, EMAIL } from '../../../constants
 
 export const SocialLogo = styled(FontAwesomeIcon)`
   margin: 0 10px;
+  height: 25px;
+  width: 25px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all ease 0.2s;
@@ -32,8 +34,8 @@ export const SocialLogo = styled(FontAwesomeIcon)`
 
   @media all and (min-width: 768px) {
     margin: 0 30px;
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     font-size: 1.7rem;
   }
 `;
