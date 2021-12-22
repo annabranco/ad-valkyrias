@@ -8,8 +8,6 @@ const IS_NOT_SERVER = !isServer();
 
 const Item = ({ state, item }) => {
   const excerptSize = IS_NOT_SERVER && window.innerWidth < 1280 ? 200 : 300;
-  console.log('$$$ excerptSize', excerptSize);
-
   const excerpt =
     item.excerpt.rendered.length > excerptSize
       ? `${item.excerpt.rendered.slice(0, excerptSize)} [...]</span></a></p>`

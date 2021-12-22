@@ -17,6 +17,7 @@ const settings = {
             ['Sobre nosotras', '/las-valkyrias/'],
             ['Equipo senior', '/senior/'],
             ['Partidos', '/category/partidos/'],
+            ['Calendario', '/calendario/'],
             ['Juveniles', '/tag/junior/'],
           ],
           featured: {
