@@ -1,13 +1,7 @@
-import { connect, useConnect } from "frontity";
-import { Logo } from "../../../assets/images";
-import {
-  MenuOverlay,
-  MenuContent,
-  ModalTitle,
-  MenuLink,
-  ModalLogo,
-  ModalTitleWrapper,
-} from "./AppModal.styles";
+import { connect, useConnect } from 'frontity';
+import { Logo } from '../../../assets/images';
+import Link from '../Link/LinkComponent';
+import { MenuOverlay, MenuContent, ModalTitle, MenuLink, ModalLogo, ModalTitleWrapper } from './AppModal.styles';
 
 const AppModal = ({ ...props }) => {
   const { state } = useConnect();
@@ -16,19 +10,17 @@ const AppModal = ({ ...props }) => {
 
   return (
     <div {...props}>
-      {state.frontity.mode !== "amp" && <MenuOverlay />}
+      {state.frontity.mode !== 'amp' && <MenuOverlay />}
       <MenuContent as="nav">
         <ModalTitleWrapper>
           <ModalTitle>A.D. Valkyrias</ModalTitle>
-          <ModalLogo src={Logo} alt="Valkyrias logo" />
+          <Link link="/home">
+            <ModalLogo src={Logo} alt="Valkyrias logo" />
+          </Link>
         </ModalTitleWrapper>
         {isThereLinks &&
           menu.map(([name, link]) => (
-            <MenuLink
-              key={name}
-              link={link}
-              aria-current={state.router.link === link ? "page" : undefined}
-            >
+            <MenuLink key={name} link={link} aria-current={state.router.link === link ? 'page' : undefined}>
               {name}
             </MenuLink>
           ))}

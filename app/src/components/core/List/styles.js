@@ -36,6 +36,7 @@ PublishDate.displayName = 'PublishDate';
 export const Excerpt = styled.div`
   line-height: 1.6em;
   color: rgba(12, 17, 43, 0.8);
+  text-align: justify;
 `;
 Excerpt.displayName = 'Excerpt';
 

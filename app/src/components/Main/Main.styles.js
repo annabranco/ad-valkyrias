@@ -1,4 +1,4 @@
-import { styled } from "frontity";
+import { styled } from 'frontity';
 
 export const ScreenArea = styled.div`
   display: flex;
@@ -6,6 +6,7 @@ export const ScreenArea = styled.div`
   align-items: center;
   justify-content: center;
 `;
+ScreenArea.displayName = 'ScreenArea';
 
 export const HeadContainer = styled.div`
   display: flex;
@@ -23,6 +24,7 @@ export const HeadContainer = styled.div`
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.4);
   overscroll-behavior: none;
 `;
+HeadContainer.displayName = 'HeadContainer';
 
 export const Body = styled.div`
   display: flex;
@@ -42,6 +44,7 @@ export const Body = styled.div`
     width: 95%;
   }
 `;
+Body.displayName = 'Body';
 
 export const MainArea = styled.div`
   margin: 50px 0 0 0;
@@ -54,3 +57,4 @@ export const MainArea = styled.div`
     margin: 50px 0 0 30%;
   }
 `;
+MainArea.displayName = 'MainArea';

@@ -4,15 +4,19 @@ import { FootballFieldImg } from '../../../../assets/images';
 
 export const PlayersDetailsWrapper = styled.div`
   height: 100%;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
-  padding: 0 30px;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 90px;
+  overflow: hidden;
+
+  @media all and (min-width: 768px) {
+    width: 100%;
+  }
 `;
 PlayersDetailsWrapper.displayName = 'PlayersDetailsWrapper';
 
@@ -20,6 +24,7 @@ export const OuterFootballField = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  left: 20px;
 `;
 OuterFootballField.displayName = 'OuterFootballField';
 
@@ -55,8 +60,11 @@ PlayerIcon.displayName = 'PlayerIcon';
 
 export const PlayerPosition = styled.p`
   margin-top: -3px;
+  margin-left: 19px;
+  width: 114px;
   text-align: center;
   font-style: italic;
+
   ${({ position }) =>
     position === 'GK' &&
     css`
@@ -67,54 +75,82 @@ PlayerPosition.displayName = 'PlayerPosition';
 
 export const ContainerPlayerCity = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 ContainerPlayerCity.displayName = 'ContainerPlayerCity';
 
 export const PlayerDetailsInfo = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  botom: 0;
-  left: -48vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 30px);
+
   width: 100%;
+
+  & > span {
+    color: gray;
+  }
 
   @media all and (min-width: 768px) {
     position: unset;
     margin-top: 50px;
     flex-direction: column;
+    grid-template-columns: 120px 2fr;
   }
 `;
 PlayerDetailsInfo.displayName = 'PlayerDetailsInfo';
 
-export const ContainerPlayerSince = styled.p``;
-ContainerPlayerSince.displayName = 'ContainerPlayerSince';
+export const ContainerPlayerInfo = styled.p`
+  margin: 0;
+  text-align: center;
+  @media all and (min-width: 768px) {
+    text-align: left;
+  }
+`;
+ContainerPlayerInfo.displayName = 'ContainerPlayerInfo';
 
 export const ContainerPlayerNetworking = styled.div`
   position: absolute;
-  top: -240px;
-  right: -55vw;
+  top: 9vh;
+  right: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  width: 80%;
+  justify-content: flex-end;
+  width: 100%;
   margin-top: 5px;
 
   @media all and (min-width: 768px) {
-    top: unset;
-    bottom: 35%;
-    right: 5%;
-    width: 30%;
-    justify-content: flex-start;
+    top: 6vh;
+    /* right: 5%;
+    width: 30%; */
+    /* justify-content: flex-start; */
   }
 `;
 ContainerPlayerNetworking.displayName = 'ContainerPlayerNetworking';
 
 export const CountryFlag = styled.img`
-  margin-left: 10px;
+  margin-left: 50%;
+
+  @media all and (min-width: 768px) {
+    margin-left: 10px;
+  }
 `;
 CountryFlag.displayName = 'CountryFlag';
+
+export const PlayerInfoField = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  justify-content: flex-start;
+  width: 100%;
+`;
+PlayerInfoField.displayName = 'PlayerInfoField';
+
+export const HiddenOnSmallDevices = styled.span`
+  display: none;
+  @media all and (min-width: 768px) {
+    display: block;
+  }
+`;
+HiddenOnSmallDevices.displayName = 'HiddenOnSmallDevices';
