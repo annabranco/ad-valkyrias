@@ -18,12 +18,11 @@ export const PlayersListWrapper = styled.div`
 
   @media all and (min-width: 768px) {
     left: 25vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+    overflow-x: auto;
     height: 200px;
-    overflow: hidden;
-    width: 70%;
+    width: 75%;
+    padding: 0 70px;
   }
 `;
 PlayersListWrapper.displayName = 'PlayersListWrapper';

@@ -55,6 +55,10 @@ export const Content = styled.div`
     isPlayer &&
     css`
       height: 100vh;
+
+      @media all and (min-width: 768px) {
+        height: 100%;
+      }
     `}
 
   * {
