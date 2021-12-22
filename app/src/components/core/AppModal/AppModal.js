@@ -1,7 +1,15 @@
 import { connect, useConnect } from 'frontity';
 import { Logo } from '../../../assets/images';
 import Link from '../Link/LinkComponent';
-import { MenuOverlay, MenuContent, ModalTitle, MenuLink, ModalLogo, ModalTitleWrapper } from './AppModal.styles';
+import {
+  MenuOverlay,
+  MenuContent,
+  ModalTitle,
+  MenuLink,
+  ModalLogo,
+  ModalTitleWrapper,
+  NavWrapper,
+} from './AppModal.styles';
 
 const AppModal = ({ ...props }) => {
   const { state } = useConnect();
@@ -18,12 +26,14 @@ const AppModal = ({ ...props }) => {
             <ModalLogo src={Logo} alt="Valkyrias logo" />
           </Link>
         </ModalTitleWrapper>
-        {isThereLinks &&
-          menu.map(([name, link]) => (
-            <MenuLink key={name} link={link} aria-current={state.router.link === link ? 'page' : undefined}>
-              {name}
-            </MenuLink>
-          ))}
+        <NavWrapper>
+          {isThereLinks &&
+            menu.map(([name, link]) => (
+              <MenuLink key={name} link={link} aria-current={state.router.link === link ? 'page' : undefined}>
+                {name}
+              </MenuLink>
+            ))}
+        </NavWrapper>
       </MenuContent>
     </div>
   );

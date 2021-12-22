@@ -27,7 +27,7 @@ export const MenuLink = styled(Link)`
   outline: 0;
   font-size: 1.6rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-family: ${fontFamilyTitle};
 
@@ -68,3 +68,11 @@ export const ModalLogo = styled.img`
   margin: 0 auto 20px;
 `;
 ModalLogo.displayName = 'ModalLogo';
+
+export const NavWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: center;
+`;
+NavWrapper.displayName = 'NavWrapper';

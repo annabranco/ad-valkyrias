@@ -13,6 +13,7 @@ import { globalStyles } from '../../config/globalStyles';
 import PlayersPage from '../views/Players/PlayersPage';
 import PlayersListPage from '../views/Players/PlayersListPage';
 import Home from '../Home/Home';
+import Calendar from '../Calendar/Calendar';
 
 const Main = ({ state, actions }) => {
   const renderMainPage = () => {
@@ -49,6 +50,7 @@ const Main = ({ state, actions }) => {
             <MainArea>
               <Switch>
                 <Home when={data.link === '/home/'} />
+                <Calendar when={data.link === '/calendario/'} />
                 <Loading when={data.isFetching} />
                 <PlayersListPage when={data.isPlayersPage}>
                   <Post />
