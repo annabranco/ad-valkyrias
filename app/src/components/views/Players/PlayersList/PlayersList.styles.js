@@ -3,7 +3,7 @@ import { styled } from 'frontity';
 import { ShirtPlayer, ShirtGK } from '../../../../assets/images';
 
 export const PlayersListWrapper = styled.div`
-  z-index: 900;
+  z-index: 2;
   position: fixed;
   bottom: 0;
   left: 5px;

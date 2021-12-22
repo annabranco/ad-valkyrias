@@ -51,6 +51,12 @@ export const Content = styled.div`
   color: rgba(12, 17, 43, 0.8);
   word-break: break-word;
 
+  ${({ isPlayer }) =>
+    isPlayer &&
+    css`
+      height: 100vh;
+    `}
+
   * {
     max-width: 100%;
     max-height: 100%;
@@ -96,6 +102,11 @@ export const Content = styled.div`
     figcaption {
       font-size: 0.7em;
     }
+    ${({ isPlayer }) =>
+      isPlayer &&
+      css`
+        height: 100%;
+      `}
   }
 
   iframe {

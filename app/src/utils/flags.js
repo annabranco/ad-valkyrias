@@ -73,7 +73,7 @@ import {
   UruguayFlag,
   VenezuelaFlag,
   SouthAfricaFlag,
-} from "../assets/images/flags";
+} from '../assets/images/flags';
 
 const FLAGS = {
   al: AlbaniaFlag,
@@ -129,7 +129,7 @@ const FLAGS = {
   mt: MaltaFlag,
   mx: MexicoFlag,
   ng: NigeriaFlag,
-  ni: NicaraguaFlag,
+  nu: NicaraguaFlag,
   nl: NetherlandsFlag,
   no: NorwayFlag,
   nz: NewZealandFlag,
@@ -152,4 +152,4 @@ const FLAGS = {
   za: SouthAfricaFlag,
 };
 
-export const getFlagURL = (countryCode) => FLAGS[countryCode];
+export const getFlagURL = countryCode => FLAGS[countryCode];

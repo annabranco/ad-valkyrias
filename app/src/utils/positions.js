@@ -166,8 +166,8 @@ export const getPlayerImgPosition = position => {
       playerImgPosition.left = '28px';
       break;
     default:
-      playerImgPosition.top = 0;
-      playerImgPosition.left = 0;
+      playerImgPosition.bottom = '63px';
+      playerImgPosition.left = '43px';
       break;
   }
   return playerImgPosition;

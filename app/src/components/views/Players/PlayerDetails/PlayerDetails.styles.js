@@ -6,7 +6,6 @@ export const PlayersDetailsWrapper = styled.div`
   height: 100%;
   width: 90%;
   box-sizing: border-box;
-  padding: 0 30px;
   color: black;
   display: flex;
   flex-direction: column;
@@ -25,6 +24,7 @@ export const OuterFootballField = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  left: 20px;
 `;
 OuterFootballField.displayName = 'OuterFootballField';
 
@@ -60,8 +60,8 @@ PlayerIcon.displayName = 'PlayerIcon';
 
 export const PlayerPosition = styled.p`
   margin-top: -3px;
+  margin-left: 19px;
   width: 114px;
-
   text-align: center;
   font-style: italic;
 
@@ -83,7 +83,6 @@ ContainerPlayerCity.displayName = 'ContainerPlayerCity';
 export const PlayerDetailsInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-
   grid-template-rows: repeat(5, 30px);
 
   width: 100%;
