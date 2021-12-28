@@ -1,9 +1,10 @@
 import React from 'react';
+import { string, func, oneOf } from 'prop-types';
+import { MAIN, PLAYER } from '../../../constants/global';
 import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE, EMAIL } from '../../../constants/social';
-import { string, func } from 'prop-types';
 import { SocialLinkButton, SocialLogo } from './SocialLink.styles';
 
-const SocialLink = ({ link = '', onClick, type }) => {
+const SocialLink = ({ link = '', onClick, place, type }) => {
   let icon;
   switch (type) {
     case FACEBOOK:
@@ -26,7 +27,7 @@ const SocialLink = ({ link = '', onClick, type }) => {
   }
 
   return (
-    <SocialLinkButton href={link} rel="noreferrer" target="_blank" type={type}>
+    <SocialLinkButton href={link} place={place} rel="noreferrer" target="_blank" type={type}>
       <SocialLogo onClick={onClick} icon={['fab', icon]} type={type} />
     </SocialLinkButton>
   );
@@ -35,6 +36,7 @@ const SocialLink = ({ link = '', onClick, type }) => {
 SocialLink.propTypes = {
   link: string.isRequired,
   onClick: func,
+  place: oneOf([MAIN, PLAYER]).isRequired,
   type: string.isRequired,
 };
 

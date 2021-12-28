@@ -6,6 +6,8 @@ import { COUNTRIES } from '../../../../utils/countries';
 import { getPlayerImgPosition, POSITIONS } from '../../../../utils/positions';
 import { RainbowFlag } from '../../../../assets/images/flags';
 import { getFlagURL } from '../../../../utils/flags';
+import { FACEBOOK, INSTAGRAM, TWITTER } from '../../../../constants/social';
+import { PLAYER } from '../../../../constants/global';
 import {
   PlayersDetailsWrapper,
   OuterFootballField,
@@ -19,7 +21,6 @@ import {
   PlayerDetailsInfo,
   HiddenOnSmallDevices,
 } from './PlayerDetails.styles';
-import { FACEBOOK, INSTAGRAM, TWITTER } from '../../../../constants/social';
 
 const PlayerDetails = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -62,9 +63,9 @@ const PlayerDetails = ({ state }) => {
           </>
         )}
         <ContainerPlayerNetworking>
-          {player.instagram && <SocialLink link={player.instagram} type={INSTAGRAM} />}
-          {player.facebook && <SocialLink link={player.facebook} type={FACEBOOK} />}
-          {player.twitter && <SocialLink link={player.twitter} type={TWITTER} />}
+          {player.instagram && <SocialLink link={player.instagram} place={PLAYER} type={INSTAGRAM} />}
+          {player.facebook && <SocialLink link={player.facebook} place={PLAYER} type={FACEBOOK} />}
+          {player.twitter && <SocialLink link={player.twitter} place={PLAYER} type={TWITTER} />}
         </ContainerPlayerNetworking>
       </PlayerDetailsInfo>
     </PlayersDetailsWrapper>
