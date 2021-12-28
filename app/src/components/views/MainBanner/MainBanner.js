@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'frontity';
 
-import { Logo } from '../../../assets/images';
-import { City, HomeContainer, HomeLogo, HomeTitle, SocialWrapper, TitleWrapper } from './MainBanner.styles';
 import Link from '../../core/Link/LinkComponent';
+import { Logo } from '../../../assets/images';
 import SocialLink from '../../sharedElements/SocialLink/SocialLink';
-import { INSTAGRAM } from '../../../constants/social';
+import { FACEBOOK, INSTAGRAM, YOUTUBE } from '../../../constants/social';
+import { MAIN } from '../../../constants/global';
+import { City, HomeContainer, HomeLogo, HomeTitle, SocialWrapper, TitleWrapper } from './MainBanner.styles';
 
 const MainBanner = () => (
   <HomeContainer>
@@ -21,7 +22,9 @@ const MainBanner = () => (
       </HomeTitle>
       <City>Madrid</City>
       <SocialWrapper>
-        <SocialLink link="https://www.instagram.com/ad-valkyrias" type={INSTAGRAM} />
+        <SocialLink link="https://www.instagram.com/ad-valkyrias" place={MAIN} type={INSTAGRAM} />
+        <SocialLink link="https://www.facebook.com/ad.valkyrias" place={MAIN} type={FACEBOOK} />
+        <SocialLink link="http://www.youtube.com/channel/UC6zrBRmvXQEYdaSyKkc9YxA" place={MAIN} type={YOUTUBE} />
       </SocialWrapper>
     </TitleWrapper>
   </HomeContainer>

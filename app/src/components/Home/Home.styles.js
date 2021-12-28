@@ -25,7 +25,6 @@ export const MainImage = styled.img`
   @media all and (min-width: 768px) {
     display: block;
     position: absolute;
-    top: -50px;
     left: 50%;
     transform: translate(-30%, 0);
     width: 60%;
@@ -35,7 +34,7 @@ MainImage.displayName = 'MainImage';
 
 export const MainImageDevices = styled.img`
   position: absolute;
-  top: 20px;
+  top: 50px;
   width: 100%;
 
   @media all and (min-width: 768px) {
@@ -43,17 +42,3 @@ export const MainImageDevices = styled.img`
   }
 `;
 MainImageDevices.displayName = 'MainImageDevices';
-
-export const MainMessage = styled.img`
-  position: absolute;
-  bottom: 80px;
-  left: 20px;
-  width: 80%;
-
-  @media all and (min-width: 768px) {
-    bottom: 10px;
-    left: 25vw;
-    width: 35%;
-  }
-`;
-MainMessage.displayName = 'MainMessage';
