@@ -37,12 +37,12 @@ export const Body = styled.div`
     rgba(100, 100, 100, 0.02),
     rgba(100, 100, 100, 0.01)
   );
-  /* min-height: 100%; */
   width: 100%;
   overflow: hidden;
   overscroll-behavior: none;
 
   @media all and (min-width: 768px) {
+    min-height: 100vh;
     width: 95%;
   }
 `;
