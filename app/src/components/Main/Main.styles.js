@@ -5,6 +5,8 @@ export const ScreenArea = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  overscroll-behavior: none;
 `;
 ScreenArea.displayName = 'ScreenArea';
 
@@ -35,10 +37,10 @@ export const Body = styled.div`
     rgba(100, 100, 100, 0.02),
     rgba(100, 100, 100, 0.01)
   );
-  overscroll-behavior: contain;
-  min-height: 100vh;
+  /* min-height: 100%; */
   width: 100%;
-  scroll: hidden;
+  overflow: hidden;
+  overscroll-behavior: none;
 
   @media all and (min-width: 768px) {
     width: 95%;
@@ -50,8 +52,8 @@ export const MainArea = styled.div`
   margin: 50px 0 0 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   overscroll-behavior: none;
-  overflow-x: hidden;
 
   @media all and (min-width: 768px) {
     margin: 50px 0 0 30%;

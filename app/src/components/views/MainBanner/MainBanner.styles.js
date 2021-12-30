@@ -143,3 +143,17 @@ export const SocialWrapper = styled.div`
   }
 `;
 SocialWrapper.displayName = 'SocialWrapper';
+
+export const SocialWrapperDevices = styled(SocialWrapper)`
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 70%;
+  display: block;
+
+  @media all and (min-width: 768px) {
+    display: none;
+  }
+`;
+SocialWrapperDevices.displayName = 'SocialWrapperDevices';

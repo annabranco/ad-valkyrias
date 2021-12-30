@@ -28,7 +28,7 @@ const SocialLink = ({ link = '', onClick, place, type }) => {
 
   return (
     <SocialLinkButton href={link} place={place} rel="noreferrer" target="_blank" type={type}>
-      <SocialLogo onClick={onClick} icon={['fab', icon]} type={type} />
+      <SocialLogo onClick={onClick} icon={['fab', icon]} place={place} type={type} />
     </SocialLinkButton>
   );
 };

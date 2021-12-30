@@ -1,13 +1,13 @@
 import { styled, css } from 'frontity';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE } from '../../../constants/social';
-import { MAIN } from '../../../constants/global';
+import { MAIN, MAIN_DEVICES } from '../../../constants/global';
 
 export const SocialLogo = styled(FontAwesomeIcon)`
-  margin: 0 10px;
+  margin: ${({ place }) => (place === MAIN_DEVICES ? '0 30px' : '0 10px')};
   height: 25px;
   width: 25px;
-  font-size: 1.2rem;
+  font-size: ${({ place }) => (place === MAIN_DEVICES ? '1.8rem' : '1.2rem')};
   cursor: pointer;
   transition: all ease 0.2s;
 
@@ -58,8 +58,8 @@ export const SocialLinkButton = styled.a`
       content: '${({ type }) => type.toUpperCase()}';
       font-size: 0.7rem;
       left: 50%;
-      top: ${({ place }) => (place === MAIN ? 'unset' : '-50%')};
-      bottom: ${({ place }) => (place === MAIN ? '-80%' : 'unset')};
+      top: ${({ place }) => (place === MAIN || place === MAIN_DEVICES ? 'unset' : '-50%')};
+      bottom: ${({ place }) => (place === MAIN || place === MAIN_DEVICES ? '-80%' : 'unset')};
       transform: translate(-50%, 0);
     }
   }
