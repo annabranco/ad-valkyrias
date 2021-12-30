@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, func, oneOf } from 'prop-types';
-import { MAIN, PLAYER } from '../../../constants/global';
+import { MAIN, MAIN_DEVICES, PLAYER } from '../../../constants/global';
 import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE, EMAIL } from '../../../constants/social';
 import { SocialLinkButton, SocialLogo } from './SocialLink.styles';
 
@@ -36,7 +36,7 @@ const SocialLink = ({ link = '', onClick, place, type }) => {
 SocialLink.propTypes = {
   link: string.isRequired,
   onClick: func,
-  place: oneOf([MAIN, PLAYER]).isRequired,
+  place: oneOf([MAIN, MAIN_DEVICES, PLAYER]).isRequired,
   type: string.isRequired,
 };
 
