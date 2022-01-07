@@ -134,12 +134,19 @@ export const SocialWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 10px auto 5px;
   width: 100%;
   display: none;
 
   @media all and (min-width: 768px) {
     display: block;
     align-items: center;
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    width: max-content;
   }
 `;
 SocialWrapper.displayName = 'SocialWrapper';
@@ -149,7 +156,7 @@ export const SocialWrapperDevices = styled(SocialWrapper)`
   bottom: 3%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 70%;
+  width: max-content;
   display: block;
 
   @media all and (min-width: 768px) {
@@ -157,3 +164,21 @@ export const SocialWrapperDevices = styled(SocialWrapper)`
   }
 `;
 SocialWrapperDevices.displayName = 'SocialWrapperDevices';
+
+export const Email = styled.p`
+  color: gray;
+  font-size: 0.9rem;
+  text-shadow: 0 0 1px lightgray;
+  font-weight: 400;
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+
+  @media all and (min-width: 768px) {
+    width: 70%;
+    bottom: 5vh;
+  }
+`;
+Email.displayName = 'Email';

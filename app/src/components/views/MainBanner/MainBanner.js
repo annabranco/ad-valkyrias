@@ -6,7 +6,7 @@ import { Logo } from '../../../assets/images';
 import SocialLink from '../../sharedElements/SocialLink/SocialLink';
 import { FACEBOOK, INSTAGRAM, YOUTUBE } from '../../../constants/social';
 import { MAIN } from '../../../constants/global';
-import { City, HomeContainer, HomeLogo, HomeTitle, SocialWrapper, TitleWrapper } from './MainBanner.styles';
+import { City, Email, HomeContainer, HomeLogo, HomeTitle, SocialWrapper, TitleWrapper } from './MainBanner.styles';
 
 const MainBanner = () => (
   <HomeContainer>
@@ -25,6 +25,7 @@ const MainBanner = () => (
         <SocialLink link="https://www.instagram.com/ad.valkyrias" place={MAIN} type={INSTAGRAM} />
         <SocialLink link="https://www.facebook.com/ad.valkyrias" place={MAIN} type={FACEBOOK} />
         <SocialLink link="http://www.youtube.com/channel/UC6zrBRmvXQEYdaSyKkc9YxA" place={MAIN} type={YOUTUBE} />
+        <Email>valkyrias@valkyrias.eu</Email>
       </SocialWrapper>
     </TitleWrapper>
   </HomeContainer>

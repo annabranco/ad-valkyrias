@@ -51,6 +51,7 @@ export const SocialLinkButton = styled.a`
   position: relative;
   text-decoration: none;
   color: black;
+  width: 50px;
 
   &:hover {
     &::after {
