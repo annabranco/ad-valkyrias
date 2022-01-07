@@ -13,7 +13,8 @@ import { globalStyles } from '../../config/globalStyles';
 import PlayersPage from '../views/Players/PlayersPage';
 import PlayersListPage from '../views/Players/PlayersListPage';
 import Home from '../Home/Home';
-import Calendar from '../Calendar/Calendar';
+import Calendar from '../views/Calendar/Calendar';
+import MapComponent from '../views/Map/Map';
 
 const Main = ({ state, actions }) => {
   const renderMainPage = () => {
@@ -51,6 +52,7 @@ const Main = ({ state, actions }) => {
               <Switch>
                 <Home when={data.link === '/home/'} />
                 <Calendar when={data.link === '/calendario/'} />
+                <MapComponent when={data.link === '/mapa/'} />
                 <Loading when={data.isFetching} />
                 <PlayersListPage when={data.isPlayersPage}>
                   <Post />

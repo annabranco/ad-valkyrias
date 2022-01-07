@@ -4,11 +4,15 @@ export const HomeWrapper = styled.div`
   position: absolute;
   top: 80px;
   height: 100%;
-  max-height: calc(100vh - 180px);
+  max-height: calc(100vh - 100px);
   width: 100%;
   overflow: hidden;
   overscroll-behavior: none;
   background-image: linear-gradient(to bottom, rgba(5, 73, 9, 0.4), rgba(172, 233, 175, 0.5), white, white);
+
+  @media all and (min-width: 384px) {
+    max-height: calc(100vh - 180px);
+  }
 
   @media all and (min-width: 768px) {
     background-image: linear-gradient(to bottom, rgba(5, 73, 9, 0.25), rgba(172, 233, 175, 0.2), white, white);
@@ -36,7 +40,7 @@ MainImage.displayName = 'MainImage';
 
 export const MainImageDevices = styled.img`
   position: absolute;
-  top: 30px;
+  top: 10vh;
   width: 100%;
 
   @media all and (min-width: 768px) {
