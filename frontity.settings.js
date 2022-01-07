@@ -18,7 +18,8 @@ const settings = {
             ['Equipo senior', '/senior/'],
             ['Partidos', '/category/partidos/'],
             ['Calendario', '/calendario/'],
-            ['Juveniles', '/tag/junior/'],
+            ['Dónde estamos', '/mapa/'],
+            // ['Juveniles', '/tag/junior/'],
           ],
           featured: {
             showOnList: true,
