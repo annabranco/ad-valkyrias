@@ -82,7 +82,14 @@ export const Content = styled.div`
     width: 100%;
     max-height: 50vh;
     object-fit: cover;
-    object-position: center;
+    object-position: center 30%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+
+    @media all and (min-width: 768px) {
+      box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+    }
 
     ${({ isPlayer }) =>
       isPlayer &&
