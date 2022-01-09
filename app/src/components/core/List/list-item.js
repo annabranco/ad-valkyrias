@@ -10,7 +10,7 @@ const Item = ({ state, item }) => {
   const excerptSize = IS_NOT_SERVER && window.innerWidth < 1280 ? 200 : 300;
   const excerpt =
     item.excerpt.rendered.length > excerptSize
-      ? `${item.excerpt.rendered.slice(0, excerptSize)} [...]</span></a></p>`
+      ? `${item.excerpt.rendered.slice(0, excerptSize)}...</span></a></p>`
       : item.excerpt.rendered;
 
   const date = new Date(item.date);

@@ -13,5 +13,7 @@ export const StyledImage = styled(Image)`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center 40%;
+  border-radius: 15px;
 `;
 StyledImage.displayName = 'StyledImage';
