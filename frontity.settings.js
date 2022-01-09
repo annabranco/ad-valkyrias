@@ -16,10 +16,10 @@ const settings = {
             ['Noticias', '/category/noticias'],
             ['Sobre nosotras', '/las-valkyrias/'],
             ['Equipo senior', '/senior/'],
+            ['Juveniles', '/juveniles/'],
             ['Partidos', '/category/partidos/'],
             ['Calendario', '/calendario/'],
             ['Dónde estamos', '/mapa/'],
-            // ['Juveniles', '/tag/junior/'],
           ],
           featured: {
             showOnList: true,
