@@ -9,10 +9,10 @@ const MAP_URL =
 const MapComponent = () => (
   <>
     <MapComponentText>
-      No disponemos de instalaciones propias, pero entrenamos en la Instalación Deportiva Básica Andrés. Podéis
-      consultar{' '}
+      Como no disponemos de instalaciones propias, entrenamos en espacio alquilado en la Instalación Deportiva Básica
+      Andrés Navarrete. Podéis consultar{' '}
       <span>
-        <Link linj="/calendario">nuestro calendario</Link>
+        <Link link="/calendario">nuestro calendario</Link>
       </span>{' '}
       acerca de los días y horarios en que estamos en la instalación, o entre en contacto con nosotras a través de
       nuestras redes o nuestro e-mail.

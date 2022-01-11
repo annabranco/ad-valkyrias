@@ -14,7 +14,7 @@ const settings = {
         theme: {
           menu: [
             ['Noticias', '/category/noticias'],
-            ['Sobre nosotras', '/las-valkyrias/'],
+            ['Sobre nosotras', '/valkyrias/'],
             ['Equipo senior', '/senior/'],
             ['Juveniles', '/juveniles/'],
             ['Partidos', '/category/partidos/'],
