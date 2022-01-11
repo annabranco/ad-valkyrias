@@ -6,6 +6,8 @@ import { PostWrapper, Title, StyledLink, Author, DateWrapper, Content } from './
 
 const Post = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
+  console.log('$$$ data', data);
+
   const post = state.source[data.type][data.id];
   const date = new Date(post.date);
   const Html2React = libraries.html2react.Component;
@@ -41,11 +43,9 @@ const Post = ({ state, actions, libraries }) => {
       {state.theme.featured.showOnPost && <FeaturedMedia id={post.featured_media} />}
 
       {data.isAttachment ? (
-        // If the post is an attachment, just render the description property,
-        // which already contains the thumbnail.
         <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
       ) : (
-        <Content isPlayer={data.isPlayer}>
+        <Content isPlayer={data.isPlayer} isPost={data.isPost}>
           <Html2React html={post.content.rendered} />
         </Content>
       )}

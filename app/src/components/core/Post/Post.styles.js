@@ -89,6 +89,12 @@ export const Content = styled.div`
     @media all and (min-width: 768px) {
       box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.2);
       border-radius: 30px;
+
+      ${({ isPost }) =>
+        !isPost &&
+        css`
+          box-shadow: none;
+        `}
     }
 
     ${({ isPlayer }) =>
@@ -103,6 +109,12 @@ export const Content = styled.div`
         @media all and (min-width: 768px) {
           min-width: auto;
         }
+      `}
+
+    ${({ isPost }) =>
+      !isPost &&
+      css`
+        box-shadow: none;
       `}
   }
 
