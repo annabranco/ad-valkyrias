@@ -8,7 +8,16 @@ export const HomeWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   overscroll-behavior: none;
-  background-image: linear-gradient(to bottom, rgba(5, 73, 9, 0.4), rgba(172, 233, 175, 0.5), white, white);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(5, 73, 9, 0.7),
+    rgba(5, 73, 9, 0.5),
+    rgba(172, 233, 175, 0.7),
+    rgba(172, 233, 175, 0.3),
+    white,
+    white,
+    white
+  );
 
   @media all and (min-width: 384px) {
     max-height: calc(100vh - 180px);
@@ -26,25 +35,22 @@ export const HomeWrapper = styled.div`
 HomeWrapper.displayName = 'HomeWrapper';
 
 export const MainImage = styled.img`
-  display: none;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 95%;
+  filter: contrast(1.2);
 
   @media all and (min-width: 768px) {
     display: block;
     position: absolute;
+    top: unset;
+    bottom: 0;
     left: 50%;
     transform: translate(-30%, 0);
-    width: 60%;
+    width: 52%;
+    filter: contrast(1.2);
   }
 `;
 MainImage.displayName = 'MainImage';
-
-export const MainImageDevices = styled.img`
-  position: absolute;
-  top: 10vh;
-  width: 100%;
-
-  @media all and (min-width: 768px) {
-    display: none;
-  }
-`;
-MainImageDevices.displayName = 'MainImageDevices';

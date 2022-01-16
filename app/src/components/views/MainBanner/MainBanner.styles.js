@@ -153,7 +153,7 @@ SocialWrapper.displayName = 'SocialWrapper';
 
 export const SocialWrapperDevices = styled(SocialWrapper)`
   position: absolute;
-  bottom: 3%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, 0);
   width: max-content;
