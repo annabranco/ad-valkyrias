@@ -22,8 +22,8 @@ const MainBanner = () => (
       </HomeTitle>
       <City>Madrid</City>
       <SocialWrapper>
-        <SocialLink link="https://www.instagram.com/ad.valkyrias" place={MAIN} type={INSTAGRAM} />
-        <SocialLink link="https://www.facebook.com/ad.valkyrias" place={MAIN} type={FACEBOOK} />
+        <SocialLink link="https://www.instagram.com/ud.valkyrias" place={MAIN} type={INSTAGRAM} />
+        <SocialLink link="https://www.facebook.com/ud.valkyrias" place={MAIN} type={FACEBOOK} />
         <SocialLink link="http://www.youtube.com/channel/UC6zrBRmvXQEYdaSyKkc9YxA" place={MAIN} type={YOUTUBE} />
         <Email>valkyrias@valkyrias.eu</Email>
       </SocialWrapper>
