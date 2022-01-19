@@ -1,9 +1,11 @@
 {
   "name": "app",
-  "version": "1.6.2",
-  "description": "A.D. Valkyrias web page",
+  "version": "1.0.0",
+  "description": "Webpage of Unión Deportiva Valkyrias",
   "keywords": [
     "frontity",
+    "football",
+    "soccer",
     "valkyrias"
   ],
   "dependencies": {

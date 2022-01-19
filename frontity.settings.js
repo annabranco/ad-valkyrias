@@ -2,9 +2,9 @@ const settings = {
   name: 'ad-valkyrias',
   state: {
     frontity: {
-      url: 'https://advalkyrias.wordpress.com',
-      title: 'A.D. Valkyrias',
-      description: 'Asociación Deportiva Valkyrias',
+      url: 'https://udvalkyrias.wordpress.com',
+      title: 'U.D. Valkyrias',
+      description: 'Unión Deportiva Valkyrias',
     },
   },
   packages: [
@@ -32,7 +32,7 @@ const settings = {
       name: '@frontity/wp-source',
       state: {
         source: {
-          api: 'https://public-api.wordpress.com/wp/v2/sites/advalkyrias.wordpress.com',
+          api: 'https://public-api.wordpress.com/wp/v2/sites/udvalkyrias.wordpress.com',
         },
       },
     },
