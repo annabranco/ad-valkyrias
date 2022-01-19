@@ -46,7 +46,7 @@ export const MainImage = styled.img`
     display: block;
     position: absolute;
     top: unset;
-    bottom: 0;
+    bottom: -10px;
     left: 50%;
     transform: translate(-30%, 0);
     width: 52%;

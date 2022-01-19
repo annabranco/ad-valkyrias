@@ -10,8 +10,8 @@ const Home = () => (
   <HomeWrapper>
     <MainImage src={OpeningImage} />
     <SocialWrapperDevices>
-      <SocialLink link="https://www.instagram.com/ad.valkyrias" place={MAIN_DEVICES} type={INSTAGRAM} />
-      <SocialLink link="https://www.facebook.com/ad.valkyrias" place={MAIN_DEVICES} type={FACEBOOK} />
+      <SocialLink link="https://www.instagram.com/ud.valkyrias" place={MAIN_DEVICES} type={INSTAGRAM} />
+      <SocialLink link="https://www.facebook.com/ud.valkyrias" place={MAIN_DEVICES} type={FACEBOOK} />
       <SocialLink link="http://www.youtube.com/channel/UC6zrBRmvXQEYdaSyKkc9YxA" place={MAIN_DEVICES} type={YOUTUBE} />
       <Email>valkyrias@valkyrias.eu</Email>
     </SocialWrapperDevices>
