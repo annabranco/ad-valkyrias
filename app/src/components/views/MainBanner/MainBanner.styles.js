@@ -58,6 +58,7 @@ export const HomeTitle = styled.h1`
   line-height: 0.9;
   color: #a8c9a7;
   user-select: none;
+  max-width: 250px;
 
   & > span {
     font-size: 1.3rem;
