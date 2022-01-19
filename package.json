@@ -1,10 +1,13 @@
 {
-  "name": "ad-valkyrias",
+  "name": "ud-valkyrias",
   "version": "1.0.0",
   "private": true,
-  "description": "Frontity project",
+  "description": "Webpage of Unión Deportiva Valkyrias",
   "keywords": [
-    "frontity"
+    "frontity",
+    "football",
+    "soccer",
+    "valkyrias"
   ],
   "engines": {
     "node": ">=10.0.0",

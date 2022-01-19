@@ -1,13 +1,13 @@
-# A.D. VALKYRIAS
+# U.D. VALKYRIAS
 
-This is the web page of the *Asociación Deportiva Valkyrias*.
+This is the web page of the *Unión Deportiva Valkyrias*.
 This project is powered by [Frontity](https://frontity.org/) and Wordpress.
 
 <img src="https://github.com/annabranco/ad-valkyrias/raw/master/app/src/assets/images/institutional/shield/valkyrias-small.png" width="30%">
 
-## Asociación Deportiva Valkyrias
+## Unión Deportiva Valkyrias
 
-*A.D. Valkyrias* is a sports association created by and for women. Its main goal is to empower girls and women and to strength female's football (soccer).
+*U.D. Valkyrias* is a sports club created by and for women. Its main goal is to empower girls and women and to strength female's football (soccer).
 It's based in Madrid, Spain.
 
 Thank you very much for your interest on visiting this page.
