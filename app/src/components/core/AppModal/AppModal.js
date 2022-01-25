@@ -21,9 +21,12 @@ const AppModal = ({ ...props }) => {
       {state.frontity.mode !== 'amp' && <MenuOverlay />}
       <MenuContent as="nav">
         <ModalTitleWrapper>
-          <ModalTitle>A.D. Valkyrias</ModalTitle>
+          <ModalTitle>U.D. Valkyrias</ModalTitle>
           <Link link="/home">
-            <ModalLogo src={Logo} alt="Valkyrias logo" />
+            <ModalLogo
+              src={Logo}
+              alt="Escudo de la Unión Deportiva Valkyrias. El escudo es un círculo con gruesos bordes negros, donde se ve una cadena enlazada en estilo nórdico antiguo. Dentro del círculo y ocupando todo su espacio hay el rostro frontal de una valquiria con casco y pintura de batalla. Del casco salen dos alas que se proyectan para fuera del círculo. Por detrás de la valquiria, al fondo, hay un arco iris. Circundando la valquiria, hay tres balones de fútbol, una en cada borde lateral y superior del círculo que da forma al escudo. En la parte inferior del círculo está escrito el nombre VALKYRIAS."
+            />
           </Link>
         </ModalTitleWrapper>
         <NavWrapper>

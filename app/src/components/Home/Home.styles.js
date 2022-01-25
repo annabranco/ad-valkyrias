@@ -1,4 +1,5 @@
 import { styled } from 'frontity';
+import { gradientBackgroundDesktop, gradientBackgroundDevices } from '../../config/globalStyles';
 
 export const HomeWrapper = styled.div`
   position: absolute;
@@ -8,23 +9,14 @@ export const HomeWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   overscroll-behavior: none;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(5, 73, 9, 0.7),
-    rgba(5, 73, 9, 0.5),
-    rgba(172, 233, 175, 0.7),
-    rgba(172, 233, 175, 0.3),
-    white,
-    white,
-    white
-  );
+  ${gradientBackgroundDevices}
 
   @media all and (min-width: 384px) {
     max-height: calc(100vh - 180px);
   }
 
   @media all and (min-width: 768px) {
-    background-image: linear-gradient(to bottom, rgba(5, 73, 9, 0.25), rgba(172, 233, 175, 0.2), white, white);
+    ${gradientBackgroundDesktop}
     height: calc(100vh - 50px);
     max-height: calc(100vh - 50px);
     width: 100%;

@@ -1,15 +1,11 @@
 import { styled } from 'frontity';
-import { fontFamilyMainTitle } from '../../../config/globalStyles';
+import { colorSecondary, fontFamilyMainTitle, fontSizeXLarge } from '../../../config/globalStyles';
 import Link from '../../core/Link/LinkComponent';
 
 export const HeaderSection = styled.header`
   width: 100%;
   box-sizing: border-box;
   padding: 10px 30px;
-  color: black;
-  display: flex;
-  flex-direction: line;
-  justify-content: space-between;
   height: 50px;
 
   @media all and (min-width: 768px) {
@@ -23,8 +19,8 @@ export const Title = styled.h2`
   right: 60px;
   top: -35px;
   font-family: ${fontFamilyMainTitle};
-  font-size: 2.5rem;
-  color: white;
+  font-size: ${fontSizeXLarge};
+  color: ${colorSecondary};
   opacity: 0.1;
 
   @media all and (min-width: 768px) {

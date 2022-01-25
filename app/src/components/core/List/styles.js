@@ -1,4 +1,5 @@
 import { styled } from 'frontity';
+import { fontSizeLarge, fontSizeSmall } from '../../../config/globalStyles';
 import Link from '../Link/LinkComponent';
 
 export const Title = styled.h1`
@@ -6,11 +7,11 @@ export const Title = styled.h1`
   min-height: 25px;
   height: auto;
   width: 90%;
-  padding-top: 24px 0 8px 40px;
+  padding: 10px 5px 10px;
   box-sizing: border-box;
-  background: rgba(50, 205, 50, 0.15);
+  background: rgba(50, 205, 50, 0.05);
   border-radius: 0 35px 35px 0;
-  font-size: 2rem;
+  font-size: ${fontSizeLarge};
   color: darkgreen;
   line-height: 1;
 `;
@@ -18,7 +19,7 @@ Title.displayName = 'Title';
 
 export const AuthorName = styled.span`
   color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
+  font-size: ${fontSizeSmall};
 `;
 AuthorName.displayName = 'AuthorName';
 
@@ -29,13 +30,12 @@ StyledLink.displayName = 'StyledLink';
 
 export const PublishDate = styled.span`
   color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
+  font-size: ${fontSizeSmall};
 `;
 PublishDate.displayName = 'PublishDate';
 
 export const Excerpt = styled.div`
   line-height: 1.6em;
-  color: rgba(12, 17, 43, 0.8);
   text-align: justify;
 `;
 Excerpt.displayName = 'Excerpt';

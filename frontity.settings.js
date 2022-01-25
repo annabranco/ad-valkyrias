@@ -1,10 +1,11 @@
 const settings = {
-  name: 'ad-valkyrias',
+  name: 'ud-valkyrias',
   state: {
     frontity: {
       url: 'https://udvalkyrias.wordpress.com',
       title: 'U.D. Valkyrias',
-      description: 'Unión Deportiva Valkyrias',
+      description:
+        'Página oficial de la Unión Deportiva Valkyrias, un club deportivo que tiene por objetivo fortalecer el fútbol femenino',
     },
   },
   packages: [
@@ -13,7 +14,7 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ['Noticias', '/category/noticias'],
+            ['Noticias', '/category/noticias/'],
             ['Sobre nosotras', '/valkyrias/'],
             ['Equipo senior', '/senior/'],
             ['Juveniles', '/juveniles/'],
