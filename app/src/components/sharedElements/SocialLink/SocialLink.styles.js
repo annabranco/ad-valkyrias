@@ -2,6 +2,7 @@ import { styled, css } from 'frontity';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE } from '../../../constants/social';
 import { MAIN, MAIN_DEVICES } from '../../../constants/global';
+import { colorTerciary } from '../../../config/globalStyles';
 
 export const SocialLogo = styled(FontAwesomeIcon)`
   margin: ${({ place }) => (place === MAIN_DEVICES ? '0 30px' : '0 10px')};
@@ -50,7 +51,7 @@ SocialLogo.displayName = 'SocialLogo';
 export const SocialLinkButton = styled.a`
   position: relative;
   text-decoration: none;
-  color: black;
+  color: ${colorTerciary};
   width: 50px;
 
   &:hover {

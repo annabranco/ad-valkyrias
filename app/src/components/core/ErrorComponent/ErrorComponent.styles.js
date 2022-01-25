@@ -1,4 +1,4 @@
-import { styled } from "frontity";
+import { styled } from 'frontity';
 
 export const ErrorWrapper = styled.div`
   height: 100%;
@@ -12,7 +12,7 @@ export const ErrorWrapper = styled.div`
   justify-content: flex-end;
   overflow: hidden;
 `;
-ErrorWrapper.displayName = "ErrorWrapper";
+ErrorWrapper.displayName = 'ErrorWrapper';
 
 export const Title = styled.h1`
   margin: 0;
@@ -22,17 +22,16 @@ export const Title = styled.h1`
   font-size: 4em;
   text-shadow: 0 0 3px black;
 `;
-Title.displayName = "Title";
+Title.displayName = 'Title';
 
 export const Description = styled.div`
   line-height: 1.6em;
-  color: rgba(12, 17, 43, 0.8);
   margin: 24px 0;
 `;
-Description.displayName = "Description";
+Description.displayName = 'Description';
 
 export const Image = styled.img`
   width: 400px;
   margin-top: 60px;
 `;
-Image.displayName = "Image";
+Image.displayName = 'Image';

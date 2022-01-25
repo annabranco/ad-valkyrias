@@ -1,5 +1,12 @@
 import { styled, css } from 'frontity';
-import { fontFamilyTitle } from '../../../config/globalStyles';
+import {
+  colorPrimary,
+  colorPrimaryDark,
+  colorPrimaryLight,
+  fontFamilyTitle,
+  fontSizeSmall,
+  fontSizeXLarge,
+} from '../../../config/globalStyles';
 import Link from '../Link/LinkComponent';
 
 export const PostWrapper = styled.div`
@@ -14,9 +21,10 @@ export const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: darkgreen;
+  color: ${colorPrimaryDark};
   font-family: ${fontFamilyTitle};
-  font-size: 2.5rem;
+  font-size: ${fontSizeXLarge};
+  line-height: 1;
 
   @media all and (min-width: 768px) {
     position: unset;
@@ -30,15 +38,13 @@ export const StyledLink = styled(Link)`
 StyledLink.displayName = 'StyledLink';
 
 export const Author = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
+  font-size: ${fontSizeSmall};
   display: inline;
 `;
 Author.displayName = 'Author';
 
 export const DateWrapper = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
+  font-size: ${fontSizeSmall};
   display: inline;
 `;
 DateWrapper.displayName = 'DateWrapper';
@@ -48,7 +54,6 @@ DateWrapper.displayName = 'DateWrapper';
  * selectors to style that HTML.
  */
 export const Content = styled.div`
-  color: rgba(12, 17, 43, 0.8);
   word-break: break-word;
 
   ${({ isPlayer }) =>
@@ -75,7 +80,7 @@ export const Content = styled.div`
   h2,
   h3,
   h4 {
-    color: darkgreen;
+    color: ${colorPrimaryDark};
   }
 
   img {
@@ -118,6 +123,14 @@ export const Content = styled.div`
       css`
         box-shadow: none;
       `}
+
+    ${({ isSeniorPage }) =>
+      isSeniorPage &&
+      css`
+        width: 100%;
+        object-fit: cover;
+        object-position: center -10%;
+      `}
   }
 
   figure {
@@ -147,8 +160,9 @@ export const Content = styled.div`
   }
 
   a {
-    color: rgb(31, 56, 197);
+    color: ${colorPrimary};
     text-decoration: underline;
+    font-weight: 700;
   }
 
   /* Input fields styles */
@@ -176,7 +190,7 @@ export const Content = styled.div`
     margin: 8px 0 4px 0;
 
     &:focus {
-      outline-color: #1f38c5;
+      outline-color: ${colorPrimaryLight};
     }
   }
 

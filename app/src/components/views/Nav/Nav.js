@@ -1,6 +1,5 @@
-import { connect } from "frontity";
-import Link from "../../core/Link/LinkComponent";
-import { NavContainer, NavItem } from "./Nav.styles";
+import { connect } from 'frontity';
+import { NavContainer, NavItem, NavLink } from './Nav.styles';
 
 const Nav = ({ state }) => (
   <NavContainer>
@@ -10,9 +9,9 @@ const Nav = ({ state }) => (
 
       return (
         <NavItem key={name}>
-          <Link link={link} aria-current={isCurrentPage ? "page" : undefined}>
+          <NavLink active={isCurrentPage.toString()} link={link} aria-current={isCurrentPage ? 'page' : undefined}>
             {name}
-          </Link>
+          </NavLink>
         </NavItem>
       );
     })}

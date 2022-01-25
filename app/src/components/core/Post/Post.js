@@ -6,8 +6,6 @@ import { PostWrapper, Title, StyledLink, Author, DateWrapper, Content } from './
 
 const Post = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
-  console.log('$$$ data', data);
-
   const post = state.source[data.type][data.id];
   const date = new Date(post.date);
   const Html2React = libraries.html2react.Component;
@@ -45,7 +43,7 @@ const Post = ({ state, actions, libraries }) => {
       {data.isAttachment ? (
         <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
       ) : (
-        <Content isPlayer={data.isPlayer} isPost={data.isPost}>
+        <Content isPlayer={data.isPlayer} isPost={data.isPost} isSeniorPage={data.route === '/senior/'}>
           <Html2React html={post.content.rendered} />
         </Content>
       )}

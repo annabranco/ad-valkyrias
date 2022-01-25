@@ -1,9 +1,14 @@
 import { styled } from 'frontity';
-import { fontFamilyMainTitle, fontFamilyTitle } from '../../../config/globalStyles';
+import {
+  colorPrimaryLight,
+  darkGradientOverlay,
+  fontFamilyMainTitle,
+  fontFamilyTitle,
+} from '../../../config/globalStyles';
 import Link from '../Link/LinkComponent';
 
 export const MenuOverlay = styled.div`
-  background-image: linear-gradient(to bottom, #004d00, mediumseagreen);
+  ${darkGradientOverlay};
 
   width: 100vw;
   height: 100vh;
@@ -37,8 +42,7 @@ export const MenuLink = styled(Link)`
   }
   /* styles for active link */
   &[aria-current='page'] {
-    color: yellow;
-    font-weight: bold;
+    color: ${colorPrimaryLight};
   }
 `;
 MenuLink.displayName = 'MenuLink';

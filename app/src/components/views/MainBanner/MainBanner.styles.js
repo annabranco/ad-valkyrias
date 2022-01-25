@@ -1,5 +1,15 @@
 import { styled } from 'frontity';
-import { fontFamilyTitle } from '../../../config/globalStyles';
+import {
+  colorPrimary,
+  colorPrimaryLight,
+  darkGradientBarLight,
+  fontFamilyTitle,
+  fontSizeBig,
+  fontSizeBigger,
+  fontSizeHuge,
+  fontSizeNormal,
+  fontSizeSmall,
+} from '../../../config/globalStyles';
 import Link from '../../core/Link/LinkComponent';
 
 export const HomeContainer = styled.div`
@@ -7,7 +17,7 @@ export const HomeContainer = styled.div`
   z-index: 4;
   top: 50px;
   left: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(145, 236, 168, 0.4));
+  ${darkGradientBarLight}
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 30px;
@@ -53,29 +63,29 @@ export const HomeTitle = styled.h1`
   margin-top: 0;
   line-height: 5px;
   font-family: ${fontFamilyTitle};
-  font-size: 1.3em;
+  font-size: ${fontSizeBig};
   font-weight: 400;
   line-height: 0.9;
-  color: #a8c9a7;
+  color: ${colorPrimaryLight};
   user-select: none;
   max-width: 250px;
 
   & > span {
-    font-size: 1.3rem;
+    font-size: ${fontSizeBig};
     font-weight: 400;
   }
 
   @media all and (min-width: 768px) {
     display: initial;
-    font-size: 1.8rem;
+    font-size: ${fontSizeBigger};
     line-height: 0.8;
     margin-top: 0;
     font-weight: 200;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 
     & > span {
-      color: darkgreen;
-      font-size: 4rem;
+      color: ${colorPrimary};
+      font-size: ${fontSizeHuge};
       font-weight: 600;
       margin-left: 0;
       vertical-align: initial;
@@ -86,25 +96,27 @@ HomeTitle.displayName = 'HomeTitle';
 
 export const AuthorInfo = styled.p`
   color: white;
-  font-size: 0.9rem;
+  font-size: ${fontSizeSmall};
   text-shadow: 0 0 1px black;
 `;
 AuthorInfo.displayName = 'AuthorInfo';
 
 export const City = styled.p`
-  color: crimson;
-  font-size: 0.8rem;
+  color: darkred;
+  font-size: ${fontSizeSmall};
   font-family: 'Bebas Neue', sans-serif;
   text-shadow: 0 0 1px black;
   text-transform: uppercase;
   margin-top: -18px;
   text-align: center;
   opacity: 0.7;
+  letter-spacing: 2px;
 
   @media all and (min-width: 768px) {
     margin-top: -20px;
-    font-size: 1rem;
-    letter-spacing: 5px;
+    font-size: ${fontSizeNormal};
+    letter-spacing: 4px;
+    color: crimson;
   }
 `;
 City.displayName = 'City';
@@ -168,7 +180,7 @@ SocialWrapperDevices.displayName = 'SocialWrapperDevices';
 
 export const Email = styled.p`
   color: gray;
-  font-size: 0.9rem;
+  font-size: ${fontSizeSmall};
   text-shadow: 0 0 1px lightgray;
   font-weight: 400;
   position: absolute;
