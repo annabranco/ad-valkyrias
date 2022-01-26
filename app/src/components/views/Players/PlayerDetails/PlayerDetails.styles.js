@@ -83,7 +83,7 @@ ContainerPlayerCity.displayName = 'ContainerPlayerCity';
 export const PlayerDetailsInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 30px);
+  grid-template-rows: repeat(5, auto);
 
   width: 100%;
 
@@ -96,6 +96,7 @@ export const PlayerDetailsInfo = styled.div`
     margin-top: 50px;
     flex-direction: column;
     grid-template-columns: 120px 2fr;
+    grid-template-rows: repeat(5, 30px);
   }
 `;
 PlayerDetailsInfo.displayName = 'PlayerDetailsInfo';
@@ -122,18 +123,18 @@ export const ContainerPlayerNetworking = styled.div`
 
   @media all and (min-width: 768px) {
     top: 6vh;
-    /* right: 5%;
-    width: 30%; */
-    /* justify-content: flex-start; */
+    right: 30px;
   }
 `;
 ContainerPlayerNetworking.displayName = 'ContainerPlayerNetworking';
 
 export const CountryFlag = styled.img`
   margin-left: 50%;
+  transform: translate(-50%, 0);
 
   @media all and (min-width: 768px) {
     margin-left: 10px;
+    transform: none;
   }
 `;
 CountryFlag.displayName = 'CountryFlag';

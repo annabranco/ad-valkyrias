@@ -59,7 +59,7 @@ export const SocialLinkButton = styled.a`
       position: absolute;
       content: '${({ type }) => type.toUpperCase()}';
       font-size: 0.7rem;
-      left: 50%;
+      left: ${({ place }) => (place === MAIN || place === MAIN_DEVICES ? '50%' : '80%')};
       top: ${({ place }) => (place === MAIN || place === MAIN_DEVICES ? 'unset' : '-50%')};
       bottom: ${({ place }) => (place === MAIN || place === MAIN_DEVICES ? '-80%' : 'unset')};
       transform: translate(-50%, 0);
