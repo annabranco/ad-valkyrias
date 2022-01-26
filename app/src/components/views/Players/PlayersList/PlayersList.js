@@ -43,10 +43,14 @@ const PlayersList = ({ state, actions }) => {
   }, [state, actions]);
 
   return (
-    <PlayersListWrapper>
+    <PlayersListWrapper numOfPlayers={playersList.length}>
       {playersList?.map(player => (
         <Link link={player.link} key={player.id}>
-          <Shirt isSelected={state.router.link === player.link} position={player.position}>
+          <Shirt
+            isSelected={state.router.link === player.link}
+            numOfPlayers={playersList.length}
+            position={player.position}
+          >
             <PlayerName letters={player.alias.length} position={player.position}>
               {player.alias}
             </PlayerName>
