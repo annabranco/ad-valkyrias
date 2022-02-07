@@ -1,0 +1,33 @@
+export const GK = 'GK';
+export const SW = 'SW';
+export const RB = 'RB';
+export const RCB = 'RCB';
+export const CB = 'CB';
+export const LCB = 'LCB';
+export const LB = 'LB';
+export const RWB = 'RWB';
+export const LWB = 'LWB';
+export const RDM = 'RDM';
+export const CDM = 'CDM';
+export const LDM = 'LDM';
+export const RM = 'RM';
+export const RCM = 'RCM';
+export const CM = 'CM';
+export const LCM = 'LCM';
+export const LM = 'LM';
+export const RAM = 'RAM';
+export const CAM = 'CAM';
+export const LAM = 'LAM';
+export const RW = 'RW';
+export const CF = 'CF';
+export const LW = 'LW';
+export const RS = 'RS';
+export const ST = 'ST';
+export const LS = 'LS';
+
+export const GKS = 'GKS';
+export const DEF = 'DEF';
+export const MID = 'MID';
+export const STR = 'STR';
+export const TEC = 'TEC';
+

@@ -1,11 +1,14 @@
 import React from 'react';
 import { connect } from 'frontity';
+
 import SocialLink from '../../../sharedElements/SocialLink/SocialLink';
-import { playerData } from '../utils';
+
 import { COUNTRIES } from '../../../../utils/countries';
-import { getPlayerImgPosition, POSITIONS } from '../../../../utils/positions';
-import { RainbowFlag } from '../../../../assets/images/flags';
 import { getFlagURL } from '../../../../utils/flags';
+import { getPlayerImgPosition, POSITIONS } from '../../../../utils/positions';
+import { playerData } from '../utils';
+
+import { RainbowFlag } from '../../../../assets/images/flags';
 import { FACEBOOK, INSTAGRAM, TWITTER } from '../../../../constants/social';
 import { PLAYER } from '../../../../constants/global';
 import {

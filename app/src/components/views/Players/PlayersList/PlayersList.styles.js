@@ -1,43 +1,53 @@
 import React from 'react';
 import { styled, css } from 'frontity';
 import { ShirtPlayer, ShirtGK } from '../../../../assets/images';
+import { colorPrimary, colorPrimaryDark, colorPrimaryLight, colorSecondary } from '../../../../config/globalStyles';
 
 export const PlayersListWrapper = styled.div`
   z-index: 2;
-  position: fixed;
-  bottom: 0;
-  left: 5px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  overflow: hidden;
+  height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  grid-auto-flow: column;
-  align-items: flex-end;
 
   @media all and (min-width: 768px) {
     left: 25vw;
     justify-content: center;
-    overflow-x: auto;
-    height: 200px;
-    width: 75%;
-
-    ${({ numOfPlayers }) => {
-      if (numOfPlayers > 14) {
-        return css`
-          grid-template-columns: repeat(auto-fit, minmax(60px, 60px));
-        `;
-      }
-      if (numOfPlayers > 20) {
-        return css`
-          grid-template-columns: repeat(auto-fit, minmax(60px, 50px));
-        `;
-      }
-    }}
   }
 `;
 PlayersListWrapper.displayName = 'PlayersListWrapper';
+
+export const PlayersGroup = styled.div`
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 120px;
+  padding: 0 15px;
+
+  /* ${({ numOfPlayers }) => {
+    if (numOfPlayers > 14) {
+      return css`
+        grid-template-columns: repeat(auto-fit, minmax(60px, 60px));
+      `;
+    }
+    if (numOfPlayers > 20) {
+      return css`
+        grid-template-columns: repeat(auto-fit, minmax(60px, 50px));
+      `;
+    }
+    return css`
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+      width: calc(numOfPlayers * 65px);
+    `;
+  }} */
+`;
+PlayersGroup.displayName = 'PlayersGroup';
 
 export const Shirt = styled.div`
   background-image: url(${({ position }) => (position === 'GK' ? ShirtGK : ShirtPlayer)});
@@ -110,3 +120,41 @@ export const PlayerName = styled.p`
   }
 `;
 PlayerName.displayName = 'PlayerName';
+
+export const GroupsButtonsWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  border-top: 1px solid gray;
+  width: 100%;
+`;
+GroupsButtonsWrapper.displayName = 'GroupsButtonsWrapper';
+
+export const GroupButton = styled.div`
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 150px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to bottom,
+    ${colorPrimaryLight},
+    ${colorPrimaryDark}
+  );
+  color: ${colorSecondary};
+  cursor: pointer;
+
+  &:hover {
+    color: gold;
+    transform: translate(1px, 1px);
+  }
+`;
+GroupsButtonsWrapper.displayName = 'GroupsButtonsWrapper';

@@ -1,7 +1,9 @@
 import { connect } from 'frontity';
-import Nav from '../Nav/Nav';
-import MobileMenu from '../../core/MobileMenu/menu';
+
 import Link from '../../core/Link/LinkComponent';
+import MobileMenu from '../../core/MobileMenu/menu';
+import Nav from '../Nav/Nav';
+
 import { Logo } from '../../../assets/images';
 import { HeaderSection, HeaderLogo, Title } from './Header.styles';
 

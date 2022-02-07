@@ -1,20 +1,22 @@
 import React from 'react';
 import { Global, connect, Head } from 'frontity';
 import Switch from '@frontity/components/switch';
-import List from '../core/List';
-import ErrorPage from '../core/ErrorComponent/ErrorComponent';
-import Loading from '../core/Loading/Loading';
-import Post from '../core/Post/Post';
-import Header from '../views/Header/Header';
-import MainBanner from '../views/MainBanner/MainBanner';
-import { IconMedium, IconSmall, IconTiny } from '../../assets/images';
-import { ScreenArea, HeadContainer, Body, MainArea } from './Main.styles';
-import { colorPrimary, globalStyles } from '../../config/globalStyles';
-import PlayersPage from '../views/Players/PlayersPage';
-import PlayersListPage from '../views/Players/PlayersListPage';
-import Home from '../Home/Home';
+
 import Calendar from '../views/Calendar/Calendar';
+import ErrorPage from '../core/ErrorComponent/ErrorComponent';
+import Header from '../views/Header/Header';
+import Home from '../Home/Home';
+import List from '../core/List';
+import Loading from '../core/Loading/Loading';
+import MainBanner from '../views/MainBanner/MainBanner';
 import MapComponent from '../views/Map/Map';
+import PlayerInfo from '../views/Players/PlayerInfo/PlayerInfo';
+import PlayersListPage from '../views/Players/PlayersListPage';
+import Post from '../core/Post/Post';
+
+import { IconMedium, IconSmall, IconTiny } from '../../assets/images';
+import { colorPrimary, globalStyles } from '../../config/globalStyles';
+import { ScreenArea, HeadContainer, Body, MainArea } from './Main.styles';
 
 const Main = ({ state, actions }) => {
   const renderMainPage = () => {
@@ -92,12 +94,13 @@ const Main = ({ state, actions }) => {
                 <Calendar when={data.link === '/calendario/'} />
                 <MapComponent when={data.link === '/mapa/'} />
                 <Loading when={data.isFetching} />
-                <PlayersListPage when={data.isPlayersPage}>
-                  <Post />
+                <PlayersListPage when={data.isPlayersPage || data.isPlayer}>
+                  {data.isPlayersPage ? <Post /> : <PlayerInfo />}
+                  {/* <Post /> */}
                 </PlayersListPage>
                 <List when={data.isArchive} />
                 <Post when={data.isPostType} />
-                <PlayersPage when={data.isPlayer} />
+                {/* <PlayersPage when={data.isPlayer} /> */}
                 <ErrorPage when={data.isError} />
               </Switch>
             </MainArea>

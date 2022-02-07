@@ -1,7 +1,8 @@
 import React from 'react';
-import { string, func, oneOf } from 'prop-types';
+import { func, oneOf, string } from 'prop-types';
+
 import { MAIN, MAIN_DEVICES, PLAYER } from '../../../constants/global';
-import { FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE, EMAIL } from '../../../constants/social';
+import { EMAIL, FACEBOOK, INSTAGRAM, TWITTER, YOUTUBE } from '../../../constants/social';
 import { SocialLinkButton, SocialLogo } from './SocialLink.styles';
 
 const SocialLink = ({ link = '', onClick, place, type }) => {
@@ -28,7 +29,7 @@ const SocialLink = ({ link = '', onClick, place, type }) => {
 
   return (
     <SocialLinkButton href={link} place={place} rel="noreferrer" target="_blank" type={type}>
-      <SocialLogo onClick={onClick} icon={['fab', icon]} place={place} type={type} />
+      <SocialLogo icon={['fab', icon]} onClick={onClick} place={place} type={type} />
     </SocialLinkButton>
   );
 };

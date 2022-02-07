@@ -1,167 +1,200 @@
+import {
+  GK,
+  SW,
+  RB,
+  RCB,
+  CB,
+  LCB,
+  LB,
+  RWB,
+  LWB,
+  RDM,
+  CDM,
+  LDM,
+  RM,
+  RCM,
+  CM,
+  LCM,
+  LM,
+  RAM,
+  CAM,
+  LAM,
+  RW,
+  CF,
+  LW,
+  RS,
+  ST,
+  LS,
+  GKS,
+  DEF,
+  MID,
+  STR,
+  TEC
+} from "../constants/positions";
+
 export const POSITIONS = {
   en: {
-    GK: 'Goalkeeper',
-    SW: 'Sweeper',
-    RB: 'Right Fullback',
-    RCB: 'Right Center-back',
-    CB: 'Center-back',
-    LCB: 'Left Center-back',
-    LB: 'Left Fullback',
-    RWB: 'Right Wing-back',
-    LWB: 'Left Wing-back',
-    RDM: 'Right Defensive Mid',
-    CDM: 'Central Defensive Mid',
-    LDM: 'Left Defensive Mid',
-    RM: 'Right Midfielder',
-    RCM: 'Right Central Mid',
-    CM: 'Central Midfielder',
-    LCM: 'Left Central Mid',
-    LM: 'Left Midfielder',
-    RAM: 'Right Attacking Mid',
-    CAM: 'Central Attacking Mid',
-    LAM: 'Left Attacking Mid',
-    RW: 'Right Winger',
-    CF: 'Center Forward',
-    LW: 'Left Winger',
-    RS: 'Right Striker',
-    ST: 'Striker',
-    LS: 'Left Striker',
+    [GK]: 'Goalkeeper',
+    [SW]: 'Sweeper',
+    [RB]: 'Right Fullback',
+    [RCB]: 'Right Center-back',
+    [CB]: 'Center-back',
+    [LCB]: 'Left Center-back',
+    [LB]: 'Left Fullback',
+    [RWB]: 'Right Wing-back',
+    [LWB]: 'Left Wing-back',
+    [RDM]: 'Right Defensive Mid',
+    [CDM]: 'Central Defensive Mid',
+    [LDM]: 'Left Defensive Mid',
+    [RM]: 'Right Midfielder',
+    [RCM]: 'Right Central Mid',
+    [CM]: 'Central Midfielder',
+    [LCM]: 'Left Central Mid',
+    [LM]: 'Left Midfielder',
+    [RAM]: 'Right Attacking Mid',
+    [CAM]: 'Central Attacking Mid',
+    [LAM]: 'Left Attacking Mid',
+    [RW]: 'Right Winger',
+    [CF]: 'Center Forward',
+    [LW]: 'Left Winger',
+    [RS]: 'Right Striker',
+    [ST]: 'Striker',
+    [LS]: 'Left Striker',
   },
   es: {
-    GK: 'Portera',
-    SW: 'Líbera',
-    RB: 'Lateral derecha',
-    RCB: 'Defensa derecha',
-    CB: 'Central',
-    LCB: 'Defensa izquierda',
-    LB: 'Lateral izquierda',
-    RWB: 'Volante derecha',
-    LWB: 'Volante izquierda',
-    RDM: 'Volante externa derecha',
-    CDM: 'Mediocentral',
-    LDM: 'Volante externa izquierda',
-    RM: 'Externa derecha',
-    RCM: 'Medio derecha',
-    CM: 'Medio central',
-    LCM: 'Medio izquierda',
-    LM: 'Externa izquierda',
-    RAM: 'Medio ofensiva derecha',
-    CAM: 'Volante de ligación',
-    LAM: 'Medio ofensiva izquierda',
-    RW: 'Punta derecha',
-    CF: 'Punta',
-    LW: 'Punta izquierda',
-    RS: 'Extrema derecha',
-    ST: 'Delantera',
-    LS: 'Extrema izquierda',
+    [GK]: 'Portera',
+    [SW]: 'Líbera',
+    [RB]: 'Lateral derecha',
+    [RCB]: 'Defensa derecha',
+    [CB]: 'Central',
+    [LCB]: 'Defensa izquierda',
+    [LB]: 'Lateral izquierda',
+    [RWB]: 'Volante derecha',
+    [LWB]: 'Volante izquierda',
+    [RDM]: 'Volante externa derecha',
+    [CDM]: 'Mediocentral',
+    [LDM]: 'Volante externa izquierda',
+    [RM]: 'Externa derecha',
+    [RCM]: 'Medio derecha',
+    [CM]: 'Medio central',
+    [LCM]: 'Medio izquierda',
+    [LM]: 'Externa izquierda',
+    [RAM]: 'Medio ofensiva derecha',
+    [CAM]: 'Volante de ligación',
+    [LAM]: 'Medio ofensiva izquierda',
+    [RW]: 'Punta derecha',
+    [CF]: 'Punta',
+    [LW]: 'Punta izquierda',
+    [RS]: 'Extrema derecha',
+    [ST]: 'Delantera',
+    [LS]: 'Extrema izquierda',
   },
 };
 
 export const getPlayerImgPosition = position => {
   const playerImgPosition = {};
   switch (position) {
-    case 'GK':
+    case GK:
       playerImgPosition.bottom = '-10px';
       playerImgPosition.left = '43px';
       break;
-    case 'SW':
+    case SW:
       playerImgPosition.bottom = '10px';
       playerImgPosition.left = '43px';
       break;
-    case 'RB':
+    case RB:
       playerImgPosition.bottom = '20px';
       playerImgPosition.right = '5px';
       break;
-    case 'RCB':
+    case RCB:
       playerImgPosition.bottom = '20px';
       playerImgPosition.left = '53px';
       break;
-    case 'CB':
+    case CB:
       playerImgPosition.bottom = '20px';
       playerImgPosition.left = '43px';
       break;
-    case 'LCB':
+    case LCB:
       playerImgPosition.bottom = '20px';
       playerImgPosition.left = '33px';
       break;
-    case 'lB':
+    case LB:
       playerImgPosition.bottom = '20px';
       playerImgPosition.left = '5px';
       break;
-    case 'RWB':
+    case RWB:
       playerImgPosition.bottom = '25px';
       playerImgPosition.right = '5px';
       break;
-    case 'LWB':
+    case LWB:
       playerImgPosition.bottom = '25px';
       playerImgPosition.left = '5px';
       break;
-
-    case 'RDM':
+    case RDM:
       playerImgPosition.bottom = '35px';
-      playerImgPosition.right = '28px';
+      playerImgPosition.right = '5px';
       break;
-    case 'CDM':
+    case CDM:
       playerImgPosition.bottom = '35px';
       playerImgPosition.left = '43px';
       break;
-    case 'LDM':
+    case LDM:
       playerImgPosition.bottom = '35px';
-      playerImgPosition.left = '28px';
+      playerImgPosition.left = '5px';
       break;
-    case 'RM':
+    case RM:
       playerImgPosition.bottom = '63px';
       playerImgPosition.right = '5px';
       break;
-    case 'MCR':
+    case RCM:
       playerImgPosition.bottom = '63px';
       playerImgPosition.right = '28px';
       break;
-    case 'CM':
+    case CM:
       playerImgPosition.bottom = '63px';
       playerImgPosition.left = '43px';
       break;
-    case 'MCL':
+    case LCM:
       playerImgPosition.bottom = '63px';
       playerImgPosition.left = '28px';
       break;
-    case 'LM':
+    case LM:
       playerImgPosition.bottom = '63px';
       playerImgPosition.left = '5px';
       break;
-    case 'RAM':
-      playerImgPosition.bottom = '50px';
-      playerImgPosition.right = '28px';
+    case RAM:
+      playerImgPosition.top = '35px';
+      playerImgPosition.right = '5px';
       break;
-    case 'AM':
-      playerImgPosition.bottom = '50px';
+    case CAM:
+      playerImgPosition.top = '35px';
       playerImgPosition.left = '43px';
       break;
-    case 'LAM':
-      playerImgPosition.bottom = '50px';
-      playerImgPosition.left = '28px';
+    case LAM:
+      playerImgPosition.top = '35px';
+      playerImgPosition.left = '5px';
       break;
-    case 'RW':
+    case RW:
       playerImgPosition.top = '18px';
       playerImgPosition.right = '10px';
       break;
-    case 'CF':
+    case CF:
       playerImgPosition.top = '18px';
       playerImgPosition.left = '43px';
       break;
-    case 'LW':
+    case LW:
       playerImgPosition.top = '18px';
       playerImgPosition.left = '10px';
       break;
-    case 'RS':
+    case RS:
       playerImgPosition.top = '5px';
       playerImgPosition.right = '28px';
       break;
-    case 'ST':
+    case ST:
       playerImgPosition.top = '5px';
       playerImgPosition.left = '43px';
       break;
-    case 'LS':
+    case LS:
       playerImgPosition.top = '5px';
       playerImgPosition.left = '28px';
       break;
@@ -171,4 +204,45 @@ export const getPlayerImgPosition = position => {
       break;
   }
   return playerImgPosition;
+};
+
+export const gerPlayerGroup = position => {
+  switch (position) {
+    case GK:
+      return GKS;
+
+    case SW:
+    case RB:
+    case RCB:
+    case CB:
+    case LCB:
+    case LB:
+    case RWB:
+    case LWB:
+      return DEF;
+
+    case RDM:
+    case CDM:
+    case LDM:
+    case RM:
+    case RCM:
+    case CM:
+    case LCM:
+    case LM:
+    case RAM:
+    case CAM:
+    case LAM:
+    case RW:
+      return MID;
+
+    case CF:
+    case LW:
+    case RS:
+    case ST:
+    case LS:
+      return STR;
+
+    default:
+      return TEC;
+  }
 };

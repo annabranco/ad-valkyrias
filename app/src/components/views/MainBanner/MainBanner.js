@@ -2,10 +2,11 @@ import React from 'react';
 import { connect } from 'frontity';
 
 import Link from '../../core/Link/LinkComponent';
-import { Logo } from '../../../assets/images';
 import SocialLink from '../../sharedElements/SocialLink/SocialLink';
-import { FACEBOOK, INSTAGRAM, YOUTUBE } from '../../../constants/social';
+
+import { Logo } from '../../../assets/images';
 import { MAIN } from '../../../constants/global';
+import { FACEBOOK, INSTAGRAM, YOUTUBE } from '../../../constants/social';
 import { City, Email, HomeContainer, HomeLogo, HomeTitle, SocialWrapper, TitleWrapper } from './MainBanner.styles';
 
 const MainBanner = () => (
