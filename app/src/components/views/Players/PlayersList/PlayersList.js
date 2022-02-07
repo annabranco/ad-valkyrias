@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'frontity';
-import { playerData } from '../utils';
+
 import Link from '../../../core/Link/LinkComponent';
-import { PlayersListWrapper, Shirt, PlayerNumber, PlayerName, PlayersGroup, GroupsButtonsWrapper, GroupButton } from './PlayersList.styles';
+
 import { gerPlayerGroup } from '../../../../utils/positions';
+import { playerData } from '../utils';
+
+import { PlayersListWrapper, Shirt, PlayerNumber, PlayerName, PlayersGroup, GroupsButtonsWrapper, GroupButton } from './PlayersList.styles';
 
 const PlayersList = ({ state, actions }) => {
   const data = state.source.get('/senior/');

@@ -1,6 +1,6 @@
 import { connect, useConnect } from 'frontity';
-import { Logo } from '../../../assets/images';
 import Link from '../Link/LinkComponent';
+import { Logo } from '../../../assets/images';
 import {
   MenuOverlay,
   MenuContent,

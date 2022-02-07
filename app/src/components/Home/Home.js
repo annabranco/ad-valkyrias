@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { OpeningImage } from '../../assets/images';
 import { MAIN_DEVICES } from '../../constants/global';
 import { FACEBOOK, INSTAGRAM, YOUTUBE } from '../../constants/social';
 import SocialLink from '../sharedElements/SocialLink/SocialLink';
+
 import { Email, SocialWrapperDevices } from '../views/MainBanner/MainBanner.styles';
 import { HomeWrapper, MainImage } from './Home.styles';
 
