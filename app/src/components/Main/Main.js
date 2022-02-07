@@ -10,11 +10,11 @@ import MainBanner from '../views/MainBanner/MainBanner';
 import { IconMedium, IconSmall, IconTiny } from '../../assets/images';
 import { ScreenArea, HeadContainer, Body, MainArea } from './Main.styles';
 import { colorPrimary, globalStyles } from '../../config/globalStyles';
-import PlayersPage from '../views/Players/PlayersPage';
 import PlayersListPage from '../views/Players/PlayersListPage';
 import Home from '../Home/Home';
 import Calendar from '../views/Calendar/Calendar';
 import MapComponent from '../views/Map/Map';
+import PlayerInfo from '../views/Players/PlayerInfo/PlayerInfo';
 
 const Main = ({ state, actions }) => {
   const renderMainPage = () => {
@@ -92,12 +92,13 @@ const Main = ({ state, actions }) => {
                 <Calendar when={data.link === '/calendario/'} />
                 <MapComponent when={data.link === '/mapa/'} />
                 <Loading when={data.isFetching} />
-                <PlayersListPage when={data.isPlayersPage}>
-                  <Post />
+                <PlayersListPage when={data.isPlayersPage || data.isPlayer}>
+                  {data.isPlayersPage ? <Post /> : <PlayerInfo />}
+                  {/* <Post /> */}
                 </PlayersListPage>
                 <List when={data.isArchive} />
                 <Post when={data.isPostType} />
-                <PlayersPage when={data.isPlayer} />
+                {/* <PlayersPage when={data.isPlayer} /> */}
                 <ErrorPage when={data.isError} />
               </Switch>
             </MainArea>

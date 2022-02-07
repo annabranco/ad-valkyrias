@@ -124,7 +124,7 @@ City.displayName = 'City';
 export const StyledLink = styled(Link)`
   font-size: 1rem;
   &:hover {
-    color: yellow;
+    color: gold;
   }
 `;
 StyledLink.displayName = 'StyledLink';

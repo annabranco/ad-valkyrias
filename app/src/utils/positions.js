@@ -172,3 +172,44 @@ export const getPlayerImgPosition = position => {
   }
   return playerImgPosition;
 };
+
+export const gerPlayerGroup = position => {
+  switch (position) {
+    case 'GK':
+      return 'GKS';
+
+    case 'SW':
+    case 'RB':
+    case 'RCB':
+    case 'CB':
+    case 'LCB':
+    case 'LB':
+    case 'RWB':
+    case 'LWB':
+      return 'DEF';
+
+    case 'RDM':
+    case 'CDM':
+    case 'LDM':
+    case 'RM':
+    case 'RCM':
+    case 'CM':
+    case 'LCM':
+    case 'LM':
+    case 'RAM':
+    case 'CAM':
+    case 'LAM':
+    case 'RW':
+      return 'MID';
+
+    case 'CF':
+    case 'LW':
+    case 'RS':
+    case 'ST':
+    case 'LS':
+      return 'STR';
+
+    default:
+      return 'OTH';
+  }
+};
