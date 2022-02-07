@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled, css } from 'frontity';
 import { ShirtPlayer, ShirtGK } from '../../../../assets/images';
-import { colorPrimary, colorPrimaryDark, colorPrimaryLight, colorSecondary } from '../../../../config/globalStyles';
+import { colorPrimary, colorPrimaryDark, colorPrimaryLight, colorSecondary, fontSizeNormal, fontSizeXSmall } from '../../../../config/globalStyles';
 
 export const PlayersListWrapper = styled.div`
   z-index: 2;
@@ -22,13 +22,19 @@ PlayersListWrapper.displayName = 'PlayersListWrapper';
 
 export const PlayersGroup = styled.div`
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   height: 120px;
+  max-width: 100%;
   padding: 0 15px;
+  overflow-x: auto;
+
+  @media all and (min-width: 768px) {
+    bottom: 40px;
+  }
 
   /* ${({ numOfPlayers }) => {
     if (numOfPlayers > 14) {
@@ -130,7 +136,7 @@ export const GroupsButtonsWrapper = styled.div`
   justify-content: flex-start;
   padding: 5px;
   border-top: 1px solid gray;
-  width: 100%;
+  width: 100vw;
 `;
 GroupsButtonsWrapper.displayName = 'GroupsButtonsWrapper';
 
@@ -140,8 +146,8 @@ export const GroupButton = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 150px;
+  height: 20px;
+  width: 120px;
   border: 1px solid gray;
   border-radius: 5px;
   background-image: linear-gradient(
@@ -150,11 +156,18 @@ export const GroupButton = styled.div`
     ${colorPrimaryDark}
   );
   color: ${colorSecondary};
+  font-size: ${fontSizeXSmall};
   cursor: pointer;
 
   &:hover {
     color: gold;
     transform: translate(1px, 1px);
+  }
+
+  @media all and (min-width: 768px) {
+      height: 30px;
+      width: 150px;
+      font-size: ${fontSizeNormal};
   }
 `;
 GroupsButtonsWrapper.displayName = 'GroupsButtonsWrapper';

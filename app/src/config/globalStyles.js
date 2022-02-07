@@ -20,6 +20,7 @@ export const fontSizeBigger = '1.8rem';
 export const fontSizeBig = '1.3rem';
 export const fontSizeNormal = '1rem';
 export const fontSizeSmall = '0.9rem';
+export const fontSizeXSmall = '0.7rem';
 
 export const darkGradientOverlay = css`
   background-image: linear-gradient(to bottom, #004d00, #3cb371);
