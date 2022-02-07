@@ -47,13 +47,14 @@ Body.displayName = 'Body';
 export const MainArea = styled.div`
   margin: 50px 0 0 0;
   height: 100%;
-  min-height: 80vh;
+  min-height: 95vh;
   width: 100%;
   overflow: hidden;
   overscroll-behavior: none;
 
   @media all and (min-width: 768px) {
     margin: 50px 0 0 30%;
+    min-height: 80vh;
   }
 `;
 MainArea.displayName = 'MainArea';
