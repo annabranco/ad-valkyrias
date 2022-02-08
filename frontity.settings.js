@@ -13,19 +13,11 @@ const settings = {
       name: 'app',
       state: {
         theme: {
-          menu: [
-            ['Noticias', '/category/noticias/'],
-            ['Sobre nosotras', '/valkyrias/'],
-            ['Equipo senior', '/senior/'],
-            ['Juveniles', '/juveniles/'],
-            ['Partidos', '/category/partidos/'],
-            ['Calendario', '/calendario/'],
-            ['Dónde estamos', '/mapa/'],
-          ],
           featured: {
             showOnList: true,
             showOnPost: false,
           },
+        language: 'es',
         },
       },
     },

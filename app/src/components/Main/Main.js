@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Global, connect, Head } from 'frontity';
 import Switch from '@frontity/components/switch';
 
@@ -17,11 +17,19 @@ import Post from '../core/Post/Post';
 import { IconMedium, IconSmall, IconTiny } from '../../assets/images';
 import { colorPrimary, globalStyles } from '../../config/globalStyles';
 import { ScreenArea, HeadContainer, Body, MainArea } from './Main.styles';
+import { LS_PREFERENCES_KEY } from '../../config/localStorage';
 
 const Main = ({ state, actions }) => {
   const renderMainPage = () => {
     const data = state.source.get(state.router.link);
     const parsedNowISOString = new Date().toISOString();
+
+    useEffect(() => {
+      const { language } = JSON.parse(localStorage?.getItem(LS_PREFERENCES_KEY)) || { language: 'es' };
+      if (state.theme.language !== language) {
+        actions.theme.changeLanguage(language);
+      }
+    }, [])
 
     return (
       <>

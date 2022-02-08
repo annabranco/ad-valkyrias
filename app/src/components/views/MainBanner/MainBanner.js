@@ -3,11 +3,12 @@ import { connect } from 'frontity';
 
 import Link from '../../core/Link/LinkComponent';
 import SocialLink from '../../sharedElements/SocialLink/SocialLink';
+import ChangeLanguageButton from '../../views/ChangeLanguageButton/ChangeLanguageButton';
 
-import { Logo } from '../../../assets/images';
+import {  EnLanguageFlag, EsLanguageFlag, Logo } from '../../../assets/images';
 import { MAIN } from '../../../constants/global';
 import { FACEBOOK, INSTAGRAM, YOUTUBE } from '../../../constants/social';
-import { City, Email, HomeContainer, HomeLogo, HomeTitle, SocialWrapper, TitleWrapper } from './MainBanner.styles';
+import { ChangeLanguageWrapper, City, Email, HomeContainer, HomeLogo, HomeTitle, LanguageButton, SocialWrapper, TitleWrapper } from './MainBanner.styles';
 
 const MainBanner = () => (
   <HomeContainer>
@@ -29,7 +30,10 @@ const MainBanner = () => (
         <Email>valkyrias@valkyrias.eu</Email>
       </SocialWrapper>
     </TitleWrapper>
+    <ChangeLanguageWrapper>
+      <ChangeLanguageButton />
+    </ChangeLanguageWrapper>
   </HomeContainer>
 );
 
-export default connect(MainBanner);
+export default MainBanner;

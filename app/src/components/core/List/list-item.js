@@ -5,8 +5,10 @@ import { isServer } from '../../../utils/server';
 import { Title, PublishDate, Excerpt } from './styles';
 
 const IS_NOT_SERVER = !isServer();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 const Item = ({ state, item }) => {
+  const { language } = state.theme;
   const excerptSize = IS_NOT_SERVER && window.innerWidth < 1280 ? 200 : 300;
   const excerpt =
     item.excerpt.rendered.length > excerptSize
@@ -14,7 +16,6 @@ const Item = ({ state, item }) => {
       : item.excerpt.rendered;
 
   const date = new Date(item.date);
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
     <article>
@@ -24,7 +25,7 @@ const Item = ({ state, item }) => {
 
       <div>
         <PublishDate>
-          <b>{date.toLocaleDateString('es', options)}</b>
+          <b>{date.toLocaleDateString(language, options)}</b>
         </PublishDate>
       </div>
 

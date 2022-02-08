@@ -7,6 +7,8 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faFutbol } from '@fortawesome/free-solid-svg-icons';
 import Main from './components/Main/Main';
 import { players, player } from './utils/handlers';
+import NAV_DB from './db/nav';
+import { LS_PREFERENCES_KEY } from './config/localStorage';
 
 library.add(fab, faEnvelope, faFutbol);
 
@@ -24,7 +26,7 @@ const App = {
   state: {
     theme: {
       autoPrefetch: 'in-view',
-      menu: [],
+      menu: NAV_DB['es'],
       isMobileMenuOpen: false,
     },
     players: null,
@@ -45,6 +47,21 @@ const App = {
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
       },
+      changeLanguage:
+        ({ state }) =>
+        (newLanguage, refresh) => {
+          const oldNav = state.theme.menu;
+
+          const newNav = NAV_DB[newLanguage];
+          state.theme.language = newLanguage;
+          state.theme.menu = newNav;
+
+          localStorage.setItem(LS_PREFERENCES_KEY, JSON.stringify({ language: newLanguage }));
+
+          if (refresh) {
+            window.location.href = '/';
+          }
+        },
       beforeSSR: before,
       beforeCSR: before,
     },
