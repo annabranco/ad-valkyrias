@@ -8,7 +8,7 @@ import ChangeLanguageButton from '../../views/ChangeLanguageButton/ChangeLanguag
 import {  EnLanguageFlag, EsLanguageFlag, Logo } from '../../../assets/images';
 import { MAIN } from '../../../constants/global';
 import { FACEBOOK, INSTAGRAM, YOUTUBE } from '../../../constants/social';
-import { City, Email, HomeContainer, HomeLogo, HomeTitle, LanguageButton, SocialWrapper, TitleWrapper } from './MainBanner.styles';
+import { ChangeLanguageWrapper, City, Email, HomeContainer, HomeLogo, HomeTitle, LanguageButton, SocialWrapper, TitleWrapper } from './MainBanner.styles';
 
 const MainBanner = () => (
   <HomeContainer>
@@ -30,7 +30,9 @@ const MainBanner = () => (
         <Email>valkyrias@valkyrias.eu</Email>
       </SocialWrapper>
     </TitleWrapper>
-    <ChangeLanguageButton />
+    <ChangeLanguageWrapper>
+      <ChangeLanguageButton />
+    </ChangeLanguageWrapper>
   </HomeContainer>
 );
 

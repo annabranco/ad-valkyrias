@@ -195,3 +195,13 @@ export const Email = styled.p`
   }
 `;
 Email.displayName = 'Email';
+
+export const ChangeLanguageWrapper = styled.div`
+  position: absolute;
+  bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+ChangeLanguageWrapper.displayName = 'ChangeLanguageWrapper';

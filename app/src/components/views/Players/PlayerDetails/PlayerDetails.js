@@ -9,6 +9,7 @@ import { getPlayerImgPosition } from '../../../../utils/positions';
 import POSITIONS from '../../../../db/positions';
 import { playerData } from '../utils';
 
+import TEXT_DETAILS from '../../../../db/playerDetails';
 import { RainbowFlag } from '../../../../assets/images/flags';
 import { FACEBOOK, INSTAGRAM, TWITTER } from '../../../../constants/social';
 import { PLAYER } from '../../../../constants/global';
@@ -28,6 +29,8 @@ import {
 
 const PlayerDetails = ({ state }) => {
   const data = state.source.get(state.router.link);
+  const { language } = state.theme;
+
   const player = playerData(state.source.page[data.id]);
   const country = player.country;
   const countryCode = COUNTRIES[country.toLowerCase()];
@@ -43,24 +46,24 @@ const PlayerDetails = ({ state }) => {
           </PlayerIcon>
         </FootballField>
       </OuterFootballField>
-      <PlayerPosition position={player.position}>{POSITIONS.es[player.position]}</PlayerPosition>
+      <PlayerPosition position={player.position}>{POSITIONS[language][player.position]}</PlayerPosition>
       <PlayerDetailsInfo>
-        <HiddenOnSmallDevices>Nombre:</HiddenOnSmallDevices>
+        <HiddenOnSmallDevices>{TEXT_DETAILS[language].name}:</HiddenOnSmallDevices>
         <ContainerPlayerInfo>{player.fullName}</ContainerPlayerInfo>
-        <HiddenOnSmallDevices>De:</HiddenOnSmallDevices>
+        <HiddenOnSmallDevices>{TEXT_DETAILS[language].from}:</HiddenOnSmallDevices>
         <ContainerPlayerCity>
           <HiddenOnSmallDevices>{player.city}</HiddenOnSmallDevices>
           <CountryFlag src={countryFlag} alt={`Flag of ${player.country}`} />
         </ContainerPlayerCity>
         {player.since && (
           <>
-            <span>Desde:</span>
+            <span>{TEXT_DETAILS[language].since}:</span>
             <ContainerPlayerInfo>{player.since}</ContainerPlayerInfo>
           </>
         )}
         {player.previousTeams && (
           <>
-            <HiddenOnSmallDevices>Otros equipos:</HiddenOnSmallDevices>
+            <HiddenOnSmallDevices>{TEXT_DETAILS[language].other}:</HiddenOnSmallDevices>
             <ContainerPlayerInfo>
               <HiddenOnSmallDevices>{player.previousTeams}</HiddenOnSmallDevices>
             </ContainerPlayerInfo>
