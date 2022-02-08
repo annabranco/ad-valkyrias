@@ -7,10 +7,15 @@ import { gerPlayerGroup } from '../../../../utils/positions';
 import { playerData } from '../utils';
 
 import { PlayersListWrapper, Shirt, PlayerNumber, PlayerName, PlayersGroup, GroupsButtonsWrapper, GroupButton } from './PlayersList.styles';
+import { DEF, GKS, MID, STR } from '../../../../constants/positions';
+import POSITIONS from '../../../../db/positions'
+console.log('>>>>>>> POSITIONS', POSITIONS);
+
 
 const PlayersList = ({ state, actions }) => {
   const data = state.source.get('/senior/');
   const { players } = state;
+  const { language } = state.theme;
   const { updatePlayers } = actions.players;
   const [playersByGroup, updatePlayersByGroup] = useState();
   const [selectedGroup, changeSelectedGroup] = useState();
@@ -98,11 +103,11 @@ const PlayersList = ({ state, actions }) => {
         </PlayersGroup>
       )}
       <GroupsButtonsWrapper>
-        <GroupButton onClick={onSelectGroup('GKS')}>Porteras</GroupButton>
-        <GroupButton onClick={onSelectGroup('DEF')}>Defensoras</GroupButton>
-        <GroupButton onClick={onSelectGroup('MID')}>Mediocampistas</GroupButton>
-        <GroupButton onClick={onSelectGroup('STR')}>Delanteras</GroupButton>
-        {/* <GroupButton onClick={onSelectGroup('TEC')}>Equipo Técnico</GroupButton> */}
+        <GroupButton onClick={onSelectGroup(GKS)}>{POSITIONS[language][GKS]}</GroupButton>
+        <GroupButton onClick={onSelectGroup(DEF)}>{POSITIONS[language][DEF]}</GroupButton>
+        <GroupButton onClick={onSelectGroup(MID)}>{POSITIONS[language][MID]}</GroupButton>
+        <GroupButton onClick={onSelectGroup(STR)}>{POSITIONS[language][STR]}</GroupButton>
+        {/* <GroupButton onClick={onSelectGroup(TEC)}>{POSITIONS[TEC]}</GroupButton> */}
       </GroupsButtonsWrapper>
     </PlayersListWrapper>
   );

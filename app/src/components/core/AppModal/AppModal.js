@@ -9,7 +9,9 @@ import {
   ModalLogo,
   ModalTitleWrapper,
   NavWrapper,
+  LanguagesButtonWrapper,
 } from './AppModal.styles';
+import ChangeLanguageButton from '../../views/ChangeLanguageButton/ChangeLanguageButton';
 
 const AppModal = ({ ...props }) => {
   const { state } = useConnect();
@@ -37,6 +39,9 @@ const AppModal = ({ ...props }) => {
               </MenuLink>
             ))}
         </NavWrapper>
+        <LanguagesButtonWrapper>
+          <ChangeLanguageButton />
+        </LanguagesButtonWrapper>
       </MenuContent>
     </div>
   );

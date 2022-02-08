@@ -135,7 +135,6 @@ export const GroupsButtonsWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 5px;
-  border-top: 1px solid gray;
   width: 100vw;
 `;
 GroupsButtonsWrapper.displayName = 'GroupsButtonsWrapper';

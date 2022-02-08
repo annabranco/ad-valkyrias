@@ -57,7 +57,7 @@ export const SocialLinkButton = styled.a`
   &:hover {
     &::after {
       position: absolute;
-      content: '${({ type }) => type.toUpperCase()}';
+      content: '${({ type }) => type?.toUpperCase()}';
       font-size: 0.7rem;
       left: ${({ place }) => (place === MAIN || place === MAIN_DEVICES ? '50%' : '80%')};
       top: ${({ place }) => (place === MAIN || place === MAIN_DEVICES ? 'unset' : '-50%')};

@@ -5,7 +5,8 @@ import SocialLink from '../../../sharedElements/SocialLink/SocialLink';
 
 import { COUNTRIES } from '../../../../utils/countries';
 import { getFlagURL } from '../../../../utils/flags';
-import { getPlayerImgPosition, POSITIONS } from '../../../../utils/positions';
+import { getPlayerImgPosition } from '../../../../utils/positions';
+import POSITIONS from '../../../../db/positions';
 import { playerData } from '../utils';
 
 import { RainbowFlag } from '../../../../assets/images/flags';

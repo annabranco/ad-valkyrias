@@ -80,3 +80,18 @@ export const NavWrapper = styled.div`
   justify-content: center;
 `;
 NavWrapper.displayName = 'NavWrapper';
+
+export const LanguagesButtonWrapper = styled.div`
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media all and (min-width: 768px) {
+    display: none;
+`;
+LanguagesButtonWrapper.displayName = 'LanguagesButtonWrapper';
