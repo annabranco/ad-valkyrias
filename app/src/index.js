@@ -26,15 +26,7 @@ const App = {
   state: {
     theme: {
       autoPrefetch: 'in-view',
-      menu: [
-        ['Noticias', '/category/noticias/'],
-        ['Sobre nosotras', '/valkyrias/'],
-        ['Equipo senior', '/senior/'],
-        ['Juveniles', '/juveniles/'],
-        ['Partidos', '/category/partidos/'],
-        ['Calendario', '/calendario/'],
-        ['Dónde estamos', '/mapa/'],
-      ],
+      menu: NAV_DB['es'],
       isMobileMenuOpen: false,
     },
     players: null,
@@ -57,11 +49,17 @@ const App = {
       },
       changeLanguage:
         ({ state }) =>
-        newLanguage => {
+        (newLanguage, refresh) => {
+          const oldNav = state.theme.menu;
+
+          const newNav = NAV_DB[newLanguage];
           state.theme.language = newLanguage;
-          state.theme.menu = NAV_DB[newLanguage]
-          if (localStorage) {
-            localStorage.setItem(LS_PREFERENCES_KEY, JSON.stringify({ language: newLanguage }));
+          state.theme.menu = newNav;
+
+          localStorage.setItem(LS_PREFERENCES_KEY, JSON.stringify({ language: newLanguage }));
+
+          if (refresh) {
+            window.location.href = '/';
           }
         },
       beforeSSR: before,

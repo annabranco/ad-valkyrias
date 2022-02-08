@@ -2,7 +2,7 @@ export default {
   en: [
     ['News', '/category/news/'],
     ['About us', '/the-valkyrias/'],
-    ['Senior team', '/senior-team/'],
+    ['Senior team', '/senior/'],
     ['Youth', '/youth/'],
     ['Matches', '/category/matches/'],
     ['Calendar', '/calendario/'],
@@ -20,7 +20,7 @@ export default {
   pt: [
     ['Notícias', '/category/noticias-pt/'],
     ['Sobre nós', '/as-valkyrias/'],
-    ['Time senior', '/time-senior/'],
+    ['Time senior', '/senior/'],
     ['Juvenis', '/infanto-juvenis/'],
     ['Jogos', '/category/jogos/'],
     ['Calendário', '/calendario/'],

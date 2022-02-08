@@ -8,7 +8,7 @@ const ChangeLanguageButton = ({ state, actions }) => {
   const { language } = state.theme;
 
   const onChangeLanguage = language => {
-    actions.theme.changeLanguage(language);
+    actions.theme.changeLanguage(language, true);
   }
 
   const renderChangeLanguageButton = () => {

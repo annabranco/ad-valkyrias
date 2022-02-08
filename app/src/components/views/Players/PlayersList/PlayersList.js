@@ -6,10 +6,9 @@ import Link from '../../../core/Link/LinkComponent';
 import { gerPlayerGroup } from '../../../../utils/positions';
 import { playerData } from '../utils';
 
-import { PlayersListWrapper, Shirt, PlayerNumber, PlayerName, PlayersGroup, GroupsButtonsWrapper, GroupButton } from './PlayersList.styles';
-import { DEF, GKS, MID, STR } from '../../../../constants/positions';
 import POSITIONS from '../../../../db/positions'
-console.log('>>>>>>> POSITIONS', POSITIONS);
+import { DEF, GKS, MID, STR } from '../../../../constants/positions';
+import { PlayersListWrapper, Shirt, PlayerNumber, PlayerName, PlayersGroup, GroupsButtonsWrapper, GroupButton } from './PlayersList.styles';
 
 
 const PlayersList = ({ state, actions }) => {
