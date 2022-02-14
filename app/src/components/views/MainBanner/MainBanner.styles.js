@@ -32,7 +32,7 @@ export const HomeContainer = styled.div`
   box-sizing: border-box;
   box-shadow: 10px 0 30px 0 rgba(0, 0, 0, 0.1);
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     position: fixed;
     z-index: 4;
     padding: 10vh 0 0;
@@ -49,7 +49,7 @@ HomeContainer.displayName = 'HomeContainer';
 export const HomeLogo = styled.img`
   display: none;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     z-index: 3;
     display: block;
     width: 250px;
@@ -75,7 +75,7 @@ export const HomeTitle = styled.h1`
     font-weight: 400;
   }
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     display: initial;
     font-size: ${fontSizeBigger};
     line-height: 0.8;
@@ -112,7 +112,7 @@ export const City = styled.p`
   opacity: 0.7;
   letter-spacing: 2px;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     margin-top: -20px;
     font-size: ${fontSizeNormal};
     letter-spacing: 4px;
@@ -136,7 +136,7 @@ export const TitleWrapper = styled.div`
   justify-content: center;
   width: 100%;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     align-items: center;
   }
 `;
@@ -151,7 +151,7 @@ export const SocialWrapper = styled.div`
   width: 100%;
   display: none;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     display: block;
     align-items: center;
     position: absolute;
@@ -166,13 +166,21 @@ SocialWrapper.displayName = 'SocialWrapper';
 
 export const SocialWrapperDevices = styled(SocialWrapper)`
   position: absolute;
-  bottom: 10%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, 0);
   width: max-content;
   display: block;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-height: 400px) {
+    bottom: 10%;
+  }
+
+  @media all and (min-height: 1100px) and (min-height: 400px)  {
+    bottom: 0;
+  }
+
+  @media all and (min-width: 920px) {
     display: none;
   }
 `;
@@ -189,7 +197,7 @@ export const Email = styled.p`
   transform: translate(-50%, 0);
   display: block;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     width: 70%;
     bottom: 5vh;
   }

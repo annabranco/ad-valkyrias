@@ -1,14 +1,14 @@
 import { styled } from 'frontity';
 
 export const MapFrame = styled.iframe`
-  margin: 50px 0 0 30px;
+  margin: 30px 0 0 30px;
   border: 1px solid black;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   width: 85%;
   height: 60vh;
   border-radius: 15px;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     margin: 50px 0 0 30px;
     width: 85%;
     height: 60vh;
@@ -27,7 +27,7 @@ export const MapComponentText = styled.p`
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
   }
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     margin: 50px 0 0 30px;
   }
 `;

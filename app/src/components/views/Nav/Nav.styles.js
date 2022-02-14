@@ -12,7 +12,7 @@ export const NavContainer = styled.nav`
   margin: 0 0 0 100px;
   overflow-x: auto;
 
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 920px) {
     display: none;
   }
 `;

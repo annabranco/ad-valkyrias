@@ -14,7 +14,7 @@ export const PlayersDetailsWrapper = styled.div`
   margin-top: 90px;
   overflow: hidden;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     width: 100%;
   }
 `;
@@ -91,7 +91,7 @@ export const PlayerDetailsInfo = styled.div`
     color: gray;
   }
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     position: unset;
     margin-top: 50px;
     flex-direction: column;
@@ -104,7 +104,7 @@ PlayerDetailsInfo.displayName = 'PlayerDetailsInfo';
 export const ContainerPlayerInfo = styled.p`
   margin: 0;
   text-align: center;
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     text-align: left;
   }
 `;
@@ -121,7 +121,7 @@ export const ContainerPlayerNetworking = styled.div`
   width: 100%;
   margin-top: 5px;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     top: 6vh;
     right: 30px;
   }
@@ -132,7 +132,7 @@ export const CountryFlag = styled.img`
   margin-left: 50%;
   transform: translate(-50%, 0);
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     margin-left: 10px;
     transform: none;
   }
@@ -150,7 +150,7 @@ PlayerInfoField.displayName = 'PlayerInfoField';
 
 export const HiddenOnSmallDevices = styled.span`
   display: none;
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     display: block;
   }
 `;

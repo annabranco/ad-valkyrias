@@ -1,5 +1,7 @@
 import { connect, useConnect } from 'frontity';
 import Link from '../Link/LinkComponent';
+import ChangeLanguageButton from '../../views/ChangeLanguageButton/ChangeLanguageButton';
+import ViewControllerLayer from '../../views/ViewControllerLayer/ViewControllerLayer';
 import { Logo } from '../../../assets/images';
 import {
   MenuOverlay,
@@ -11,7 +13,6 @@ import {
   NavWrapper,
   LanguagesButtonWrapper,
 } from './AppModal.styles';
-import ChangeLanguageButton from '../../views/ChangeLanguageButton/ChangeLanguageButton';
 
 const AppModal = ({ ...props }) => {
   const { state } = useConnect();
@@ -20,6 +21,7 @@ const AppModal = ({ ...props }) => {
 
   return (
     <div {...props}>
+      <ViewControllerLayer />
       {state.frontity.mode !== 'amp' && <MenuOverlay />}
       <MenuContent as="nav">
         <ModalTitleWrapper>

@@ -1,11 +1,15 @@
 import { styled } from 'frontity';
+import Link from '../Link/LinkComponent';
 import {
   colorPrimaryLight,
   darkGradientOverlay,
   fontFamilyMainTitle,
   fontFamilyTitle,
+  fontSizeBig,
+  fontSizeBigger,
+  fontSizeLarge,
+  fontSizeXLarge,
 } from '../../../config/globalStyles';
-import Link from '../Link/LinkComponent';
 
 export const MenuOverlay = styled.div`
   ${darkGradientOverlay};
@@ -23,6 +27,7 @@ MenuOverlay.displayName = 'MenuOverlay';
 export const MenuContent = styled.div`
   z-index: 3;
   position: relative;
+  height: 100vh;
 `;
 MenuContent.displayName = 'MenuContent';
 
@@ -30,11 +35,40 @@ export const MenuLink = styled(Link)`
   width: 100%;
   display: inline-block;
   outline: 0;
-  font-size: 1.6rem;
+  font-size: ${fontSizeBig};
   text-align: center;
   margin-bottom: 10px;
   text-transform: uppercase;
   font-family: ${fontFamilyTitle};
+
+  @media all and (min-width: 360px) {
+    margin: 0 0 10px 0;
+  }
+
+  @media all and (min-width: 390px) {
+    font-size: ${fontSizeBigger};
+    margin: 5% 0;
+  }
+
+  @media all and (min-width: 540px) and (min-height: 720px) {
+    font-size: ${fontSizeBig};
+    margin: 5% 0;
+  }
+
+  @media all and (min-width: 568px) {
+    font-size: ${fontSizeBigger};
+    margin: 10% 0;
+  }
+
+  @media all and (min-width: 768px) {
+    font-size: ${fontSizeLarge};
+    margin: 10% 0;
+  }
+
+  @media all and (min-width: 800px) {
+    font-size: ${fontSizeXLarge};
+    margin: 10% 0;
+  }
 
   &:hover,
   &:focus {
@@ -74,16 +108,33 @@ export const ModalLogo = styled.img`
 ModalLogo.displayName = 'ModalLogo';
 
 export const NavWrapper = styled.div`
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: space-around;
   justify-content: center;
+
+  @media all and (min-width: 390px) {
+    top: 55%;
+  }
+
+  @media all and (min-width: 420px) {
+    top: 50%;
+  }
+
+  @media all and (min-width: 540px) and (min-height: 720px) {
+    top: 55%;
+  }
+
 `;
 NavWrapper.displayName = 'NavWrapper';
 
 export const LanguagesButtonWrapper = styled.div`
   position: absolute;
-  bottom: 15%;
+  bottom: 30%;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
@@ -91,7 +142,7 @@ export const LanguagesButtonWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     display: none;
 `;
 LanguagesButtonWrapper.displayName = 'LanguagesButtonWrapper';

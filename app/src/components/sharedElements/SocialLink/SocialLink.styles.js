@@ -39,7 +39,7 @@ export const SocialLogo = styled(FontAwesomeIcon)`
     }
   }}
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     margin: 0 30px;
     height: 30px;
     width: 30px;

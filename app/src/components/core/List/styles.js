@@ -46,9 +46,6 @@ export const ListContainer = styled.section`
   padding: 24px;
   list-style: none;
 
-  @media all and (min-width: 768px) {
-    /* width: 800px; */
-  }
 `;
 ListContainer.displayName = 'ListContainer';
 

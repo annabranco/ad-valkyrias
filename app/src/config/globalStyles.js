@@ -54,9 +54,10 @@ export const gradientBackgroundDesktop = css`
 export const gradientMainBackground = css`
   background-image: linear-gradient(
     90deg,
-    rgba(100, 100, 100, 0.1),
     rgba(100, 100, 100, 0.02),
-    rgba(100, 100, 100, 0.01)
+    rgba(100, 100, 100, 0.01),
+    white,
+    white
   );
 `;
 
