@@ -21,7 +21,7 @@ const AppModal = ({ ...props }) => {
 
   return (
     <div {...props}>
-      <ViewControllerLayer />
+      {/* <ViewControllerLayer /> */}
       {state.frontity.mode !== 'amp' && <MenuOverlay />}
       <MenuContent as="nav">
         <ModalTitleWrapper>

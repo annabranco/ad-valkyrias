@@ -13,5 +13,15 @@ export const CalendarFrame = styled.iframe`
     width: 85%;
     height: 80vh;
   }
+
+  @media all and (orientation:portrait) and (min-width: 768px) and (min-height: 1120px) {
+    margin: 15% 0 0 50%;
+    transform: translate(-50%, 0);
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    margin: 7% 0 0 50%;
+    transform: translate(-50%, 0);
+  }
 `;
 CalendarFrame.displayName = 'CalendarFrame';

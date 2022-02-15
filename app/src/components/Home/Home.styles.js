@@ -14,7 +14,7 @@ export const HomeWrapper = styled.div`
     max-height: calc(100vh - 100px);
   }
 
-  @media all and (min-width: 384px) and (min-height: 400px) {
+  @media all and (min-width: 360px) and (min-height: 400px) {
     max-height: calc(100vh - 180px);
   }
 
@@ -25,6 +25,10 @@ export const HomeWrapper = styled.div`
     width: 100%;
     top: 50px;
     left: 0;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    max-height: unset;
   }
 `;
 HomeWrapper.displayName = 'HomeWrapper';
@@ -46,6 +50,10 @@ export const MainImage = styled.img`
     transform: translate(-30%, 0);
     width: 52%;
     filter: contrast(1.2);
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    width: 40%;
   }
 `;
 MainImage.displayName = 'MainImage';

@@ -28,8 +28,81 @@ export const MenuContent = styled.div`
   z-index: 3;
   position: relative;
   height: 100vh;
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `;
 MenuContent.displayName = 'MenuContent';
+
+export const ModalTitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    width: 60%;
+  }
+`;
+ModalTitleWrapper.displayName = 'ModalTitleWrapper';
+
+export const ModalTitle = styled.p`
+  z-index: 3;
+  font-family: ${fontFamilyMainTitle};
+  font-size: 2.5rem;
+  color: white;
+  margin: 20px auto;
+  text-align: center;
+`;
+ModalTitle.displayName = 'ModalTitle';
+
+export const ModalLogo = styled.img`
+  height: 150px;
+  width: 150px;
+  margin: 0 auto 20px;
+
+    @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    margin-bottom: 50px;
+  }
+`;
+ModalLogo.displayName = 'ModalLogo';
+
+export const NavWrapper = styled.div`
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: center;
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    position: unset;
+    transform: none;
+    width: 100%;
+  }
+
+  @media all and (min-width: 390px) {
+    top: 55%;
+  }
+
+  @media all and (min-width: 420px) {
+    top: 50%;
+  }
+
+  @media all and (min-width: 540px) and (min-height: 720px) {
+    top: 55%;
+  }
+`;
+NavWrapper.displayName = 'NavWrapper';
 
 export const MenuLink = styled(Link)`
   width: 100%;
@@ -70,6 +143,11 @@ export const MenuLink = styled(Link)`
     margin: 10% 0;
   }
 
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    font-size: ${fontSizeBig};
+    margin: 2% 0;
+  }
+
   &:hover,
   &:focus {
     background-color: rgba(0, 0, 0, 0.05);
@@ -81,57 +159,6 @@ export const MenuLink = styled(Link)`
 `;
 MenuLink.displayName = 'MenuLink';
 
-export const ModalTitleWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-`;
-ModalTitleWrapper.displayName = 'ModalTitleWrapper';
-
-export const ModalTitle = styled.p`
-  z-index: 3;
-  font-family: ${fontFamilyMainTitle};
-  font-size: 2.5rem;
-  color: white;
-  margin: 20px auto 20px;
-  text-align: center;
-`;
-ModalTitle.displayName = 'ModalTitle';
-
-export const ModalLogo = styled.img`
-  height: 150px;
-  width: 150px;
-  margin: 0 auto 20px;
-`;
-ModalLogo.displayName = 'ModalLogo';
-
-export const NavWrapper = styled.div`
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: space-around;
-  justify-content: center;
-
-  @media all and (min-width: 390px) {
-    top: 55%;
-  }
-
-  @media all and (min-width: 420px) {
-    top: 50%;
-  }
-
-  @media all and (min-width: 540px) and (min-height: 720px) {
-    top: 55%;
-  }
-
-`;
-NavWrapper.displayName = 'NavWrapper';
-
 export const LanguagesButtonWrapper = styled.div`
   position: absolute;
   bottom: 30%;
@@ -142,7 +169,18 @@ export const LanguagesButtonWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media all and (min-width: 820px) and (min-height: 1180px) {
+    bottom: 22%;
+  }
+
   @media all and (min-width: 920px) {
     display: none;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    bottom: 42%;
+    right: -45%;
+    transform: none;
+  }
 `;
 LanguagesButtonWrapper.displayName = 'LanguagesButtonWrapper';

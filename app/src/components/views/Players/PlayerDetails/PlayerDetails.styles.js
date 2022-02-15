@@ -1,6 +1,7 @@
 import React from 'react';
 import { styled, css } from 'frontity';
 import { FootballFieldImg } from '../../../../assets/images';
+import { fontSizeXSmall } from '../../../../config/globalStyles';
 
 export const PlayersDetailsWrapper = styled.div`
   height: 100%;
@@ -17,6 +18,13 @@ export const PlayersDetailsWrapper = styled.div`
   @media all and (min-width: 920px) {
     width: 100%;
   }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    height: 100vh;
+    width: 160%;
+    flex-direction: row;
+    overflow: hidden;
+  }
 `;
 PlayersDetailsWrapper.displayName = 'PlayersDetailsWrapper';
 
@@ -25,6 +33,10 @@ export const OuterFootballField = styled.div`
   display: flex;
   justify-content: center;
   left: 20px;
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    left: 0;
+  }
 `;
 OuterFootballField.displayName = 'OuterFootballField';
 
@@ -70,6 +82,14 @@ export const PlayerPosition = styled.p`
     css`
       margin-top: 4px;
     `}
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    position: absolute;
+    left: 5px;
+    text-align: Left;
+    font-size: ${fontSizeXSmall};
+    white-space: nowrap;
+  }
 `;
 PlayerPosition.displayName = 'PlayerPosition';
 
@@ -98,14 +118,28 @@ export const PlayerDetailsInfo = styled.div`
     grid-template-columns: 120px 2fr;
     grid-template-rows: repeat(5, 30px);
   }
+
+    @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    margin-left: 10px;
+  }
 `;
 PlayerDetailsInfo.displayName = 'PlayerDetailsInfo';
 
 export const ContainerPlayerInfo = styled.p`
   margin: 0;
   text-align: center;
+
   @media all and (min-width: 920px) {
     text-align: left;
+  }
+
+  @media all and (orientation:landscape) and (max-width: 1024px) and (max-height: 768px) {
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 1024) and (min-height: 768px) and (max-width: 1280px) and (max-height: 900px){
+    margin-left: 0;
   }
 `;
 ContainerPlayerInfo.displayName = 'ContainerPlayerInfo';
@@ -150,7 +184,12 @@ PlayerInfoField.displayName = 'PlayerInfoField';
 
 export const HiddenOnSmallDevices = styled.span`
   display: none;
+
   @media all and (min-width: 920px) {
+    display: block;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
     display: block;
   }
 `;

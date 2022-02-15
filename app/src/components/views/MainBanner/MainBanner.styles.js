@@ -43,6 +43,10 @@ export const HomeContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
   }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) and (max-width: 1280px) and (max-height: 900px){
+  align-items: center;
+  }
 `;
 HomeContainer.displayName = 'HomeContainer';
 
@@ -55,6 +59,16 @@ export const HomeLogo = styled.img`
     width: 250px;
     height: 250px;
     margin-bottom: 100px;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) and (max-width: 1280px) and (max-height: 900px){
+    margin-left: -10px;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) and (max-width: 1024px) and (max-height: 768px){
+    width: 220px;
+    height: 220px;
+    margin-left: -10px;
   }
 `;
 HomeLogo.displayName = 'HomeLogo';
@@ -176,12 +190,21 @@ export const SocialWrapperDevices = styled(SocialWrapper)`
     bottom: 10%;
   }
 
+  @media all and (max-width: 400px) and (min-height: 360px)  {
+    bottom: 0;
+  }
+
   @media all and (min-height: 1100px) and (min-height: 400px)  {
     bottom: 0;
   }
 
   @media all and (min-width: 920px) {
     display: none;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    bottom: unset;
+    top: 22%;
   }
 `;
 SocialWrapperDevices.displayName = 'SocialWrapperDevices';
@@ -200,6 +223,10 @@ export const Email = styled.p`
   @media all and (min-width: 920px) {
     width: 70%;
     bottom: 5vh;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    -webkit-text-stroke: 1px black;
   }
 `;
 Email.displayName = 'Email';

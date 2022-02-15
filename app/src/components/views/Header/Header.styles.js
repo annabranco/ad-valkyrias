@@ -75,5 +75,10 @@ export const HeaderLogo = styled.img`
   @media all and (min-width: 920px) {
     display: none;
   }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    height: 80px;
+    width: 80px;
+  }
 `;
 HeaderLogo.displayName = 'HeaderLogo';

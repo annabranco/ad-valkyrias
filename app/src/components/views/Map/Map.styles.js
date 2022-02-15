@@ -13,6 +13,14 @@ export const MapFrame = styled.iframe`
     width: 85%;
     height: 60vh;
   }
+
+  @media all and (orientation:portrait) and (min-width: 768px) and (min-height: 1120px) {
+    width: 92%;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    width: 92%;
+  }
 `;
 MapFrame.displayName = 'MapFrame';
 
@@ -29,6 +37,15 @@ export const MapComponentText = styled.p`
 
   @media all and (min-width: 920px) {
     margin: 50px 0 0 30px;
+  }
+
+  @media all and (orientation:portrait) and (min-width: 768px) and (min-height: 1120px) {
+    margin: 100px 0 0 30px;
+    width: 92%;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    width: 92%;
   }
 `;
 MapComponentText.displayName = 'MapComponentText';
