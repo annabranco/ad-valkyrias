@@ -10,9 +10,14 @@ import {
 import Link from '../Link/LinkComponent';
 
 export const PostWrapper = styled.div`
+  min-height: calc(92.5vh);
   width: 100%;
   margin: 0;
   padding: 24px;
+
+  @media all and (min-width: 920px) {
+    min-height: auto;
+  }
 `;
 PostWrapper.displayName = 'PostWrapper';
 
@@ -26,7 +31,7 @@ export const Title = styled.h1`
   font-size: ${fontSizeXLarge};
   line-height: 1;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     position: unset;
   }
 `;
@@ -61,7 +66,7 @@ export const Content = styled.div`
     css`
       height: 100vh;
 
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 920px) {
         height: 100%;
       }
     `}
@@ -91,7 +96,7 @@ export const Content = styled.div`
     border-radius: 20px;
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
 
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 920px) {
       box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.2);
       border-radius: 30px;
 
@@ -111,7 +116,7 @@ export const Content = styled.div`
         border-radius: 30px;
         box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
 
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 920px) {
           box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.4) !important;
 
           min-width: auto;
@@ -245,7 +250,7 @@ export const Content = styled.div`
     css`
       margin-top: 80px;
 
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 920px) {
         margin-top: 0;
       }
     `}

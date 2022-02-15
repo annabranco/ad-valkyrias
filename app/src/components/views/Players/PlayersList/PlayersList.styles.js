@@ -13,7 +13,7 @@ export const PlayersListWrapper = styled.div`
   height: 100%;
   width: 100%;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     left: 25vw;
     justify-content: center;
   }
@@ -21,7 +21,7 @@ export const PlayersListWrapper = styled.div`
 PlayersListWrapper.displayName = 'PlayersListWrapper';
 
 export const PlayersGroup = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   display: flex;
   flex-direction: row;
@@ -32,8 +32,16 @@ export const PlayersGroup = styled.div`
   padding: 0 15px;
   overflow-x: auto;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     bottom: 40px;
+  }
+
+  @media all and (min-width: 1280px) {
+    bottom: 25px;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) and (max-width: 1280px) and (max-height: 900px){
+    height: 16%;
   }
 
   /* ${({ numOfPlayers }) => {
@@ -70,7 +78,7 @@ export const Shirt = styled.div`
     transform: scale(1.2);
   }
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     background-size: 100%;
     width: 100px;
     height: 100px;
@@ -104,7 +112,7 @@ export const PlayerNumber = styled.p`
   letter-spacing: -3px;
   margin-left: -3px;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     font-size: 3rem;
     margin-top: ${({ letters }) => (letters > 7 ? '-9px' : '-10px')};
   }
@@ -120,7 +128,7 @@ export const PlayerName = styled.p`
   letter-spacing: ${({ letters }) => (letters > 7 ? '-1px' : 'normal')};
   margin: ${({ letters }) => (letters > 7 ? '9px 0 0' : '8px 0 0')};
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     font-size: ${({ letters }) => (letters > 7 ? '1.1rem' : '1.2rem')};
     margin: ${({ letters }) => (letters > 7 ? '14px 0 0' : '13px 0 0')};
   }
@@ -163,7 +171,7 @@ export const GroupButton = styled.div`
     transform: translate(1px, 1px);
   }
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
       height: 30px;
       width: 150px;
       font-size: ${fontSizeNormal};

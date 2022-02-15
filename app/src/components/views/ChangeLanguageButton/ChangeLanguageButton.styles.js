@@ -21,6 +21,5 @@ export const LanguageButton = styled.div`
       white-space: nowrap;
     }
   }
-
 `;
 LanguageButton.displayName = 'LanguageButton';

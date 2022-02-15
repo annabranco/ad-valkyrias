@@ -37,7 +37,7 @@ export const Body = styled.div`
   overflow: hidden;
   overscroll-behavior: none;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     min-height: 100vh;
     width: 95%;
   }
@@ -47,12 +47,11 @@ Body.displayName = 'Body';
 export const MainArea = styled.div`
   margin: 50px 0 0 0;
   height: 100%;
-  min-height: 95vh;
   width: 100%;
   overflow: hidden;
   overscroll-behavior: none;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     margin: 50px 0 0 30%;
     min-height: 80vh;
   }

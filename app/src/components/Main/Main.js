@@ -104,11 +104,9 @@ const Main = ({ state, actions }) => {
                 <Loading when={data.isFetching} />
                 <PlayersListPage when={data.isPlayersPage || data.isPlayer}>
                   {data.isPlayersPage ? <Post /> : <PlayerInfo />}
-                  {/* <Post /> */}
                 </PlayersListPage>
                 <List when={data.isArchive} />
                 <Post when={data.isPostType} />
-                {/* <PlayersPage when={data.isPlayer} /> */}
                 <ErrorPage when={data.isError} />
               </Switch>
             </MainArea>

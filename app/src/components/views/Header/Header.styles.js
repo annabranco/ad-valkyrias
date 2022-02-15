@@ -8,7 +8,7 @@ export const HeaderSection = styled.header`
   padding: 10px 30px;
   height: 50px;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     height: 10px;
   }
 `;
@@ -23,7 +23,7 @@ export const Title = styled.h2`
   color: ${colorSecondary};
   opacity: 0.1;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 920px) {
     right: 2vw;
     top: -45px;
     font-size: 3rem;
@@ -66,8 +66,19 @@ export const HeaderLogo = styled.img`
   left: 10px;
   height: 80px;
   width: 80px;
-  @media all and (min-width: 768px) {
+
+  @media all and (min-width: 560px) {
+    height: 120px;
+    width: 120px;
+  }
+
+  @media all and (min-width: 920px) {
     display: none;
+  }
+
+  @media all and (orientation:landscape) and (min-width: 640px) and (min-height: 360px) {
+    height: 80px;
+    width: 80px;
   }
 `;
 HeaderLogo.displayName = 'HeaderLogo';
