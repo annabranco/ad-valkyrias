@@ -45,6 +45,7 @@ const Main = ({ state, actions }) => {
 
           <meta name="DC.creator" content="Unión Deportiva Valkyrias" />
           <meta name="DC.description" lang="es" content={state.frontity.description} />
+          <meta name="facebook-domain-verification" content="hb6q197h73eab3z5x5xcw1zzf6dnxf" />
           <meta name="DC.date" scheme="W3CDTF" content={parsedNowISOString} />
           <meta name="DC.date.issue" content={parsedNowISOString} />
           <meta name="DC.language" scheme="RFC1766" content="es_ES" />
