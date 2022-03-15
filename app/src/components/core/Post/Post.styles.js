@@ -134,7 +134,7 @@ export const Content = styled.div`
       css`
         width: 100%;
         object-fit: cover;
-        object-position: center -10%;
+        object-position: center 70%;
       `}
   }
 
